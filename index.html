@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>FLYING BIRDS</title>
+<style>
+  @font-face {
+    font-family: 'Overbit';
+    src: url(data:font/otf;base64,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dHN1bW1hdGlvbnJhZGljYWxpbmZpbml0eWludGVncmFsYXBwcm94ZXF1YWxub3RlcXVhbGxvemVuZ2V1bmkwMkM5dW5pMDMyNnVuaTIyMTl1bmkwMEEwdW5pMDBBRGNhcm9uLnNhbHRodW5nYXJ1bWxhdXQuY2FzZWJyZXZlLmNhc2Vkb3RhY2NlbnQuY2FzZXJpbmcuY2FzZXRpbGRlLmNhc2VjYXJvbi5jYXNlY2lyY3VtZmxleC5jYXNlZ3JhdmUuY2FzZWRpZXJlc2lzLmNhc2VtYWNyb24uY2FzZWFjdXRlLmNhc2Vjb21tYWFjY2VudGNvbWIuc2FsdGxlc3NlcXVhbGdyZWF0ZXJlcXVhbHVuaUY4RkZsb25nc190Zl9mX2xmX2ZfaWZfZnVuaTAzQTl1bmkwMjM3QW1hY3JvbmFtYWNyb25BYnJldmVhYnJldmVDYWN1dGVjYWN1dGVDY2lyY3VtZmxleGNjaXJjdW1mbGV4Q2RvdGFjY2VudGNkb3RhY2NlbnRDY2Fyb25jY2Fyb25EY2Fyb25kY2Fyb25EY3JvYXRkY3JvYXRFbWFjcm9uZW1hY3JvbkVicmV2ZWVicmV2ZUVkb3RhY2NlbnRlZG90YWNjZW50ZW9nb25la0VjYXJvbmVjYXJvbkdjaXJjdW1mbGV4Z2NpcmN1bWZsZXhHYnJldmVnYnJldmVHZG90YWNjZW50Z2RvdGFjY2VudEhjaXJjdW1mbGV4aGNpcmN1bWZsZXhIYmFyaGJhcnVuaTAxMjJ1bmkwMTIzQW9nb25la2FvZ29uZWtJdGlsZGVpdGlsZGVJbWFjcm9uaW1hY3JvbklvZ29uZWtpb2dvbmVrSWRvdGFjY2VudElKaWpKY2lyY3VtZmxleGpjaXJjdW1mbGV4dW5pMDEzNnVuaTAxMzdrZ3JlZW5sYW5kaWNMYWN1dGVsYWN1dGV1bmkwMTNCdW5pMDEzQ0xjYXJvbmxjYXJvbkxkb3RsZG90TmFjdXRlbmFjdXRldW5pMDE0NXVuaTAxNDZOY2Fyb25uY2Fyb25uYXBvc3Ryb3BoZU9tYWNyb25vbWFjcm9uT2JyZXZlb2JyZXZlT2h1bmdhcnVtbGF1dG9odW5nYXJ1bWxhdXRSYWN1dGVyYWN1dGV1bmkwMTU2dW5pMDE1N1JjYXJvbnJjYXJvblNhY3V0ZXNhY3V0ZVNjaXJjdW1mbGV4c2NpcmN1bWZsZXhTY2VkaWxsYXNjZWRpbGxhdW5pMDE2MnVuaTAxNjNUY2Fyb250Y2Fyb25UYmFydGJhclV0aWxkZXV0aWxkZVVtYWNyb251bWFjcm9uVWJyZXZldWJyZXZlVXJpbmd1cmluZ1VodW5nYXJ1bWxhdXR1aHVuZ2FydW1sYXV0VW9nb25la3VvZ29uZWtXY2lyY3VtZmxleHdjaXJjdW1mbGV4WWNpcmN1bWZsZXh5Y2lyY3VtZmxleFphY3V0ZXphY3V0ZVpkb3RhY2NlbnR6ZG90YWNjZW50bG9uZ3N1bmkwMjE4dW5pMDIxOXVuaTAyMUF1bmkwMjFCV2dyYXZld2dyYXZlV2FjdXRld2FjdXRlV2RpZXJlc2lzd2RpZXJlc2lzZnJhbmNsaXJhcGVzZXRhRXVyb2VzdGltYXRlZEVvZ29uZWtWZXJzaW9uIDEuMDAwT3ZlcmJpdCBpcyBhIHRyYWRlbWFyayBvZiBMZXR0ZXJ0eXBlIFN0dWRpbyBDby4gXChUTVwpClwoY1wpIDIwMjQgYnkgTGV0dGVydHlwZSBTdHVkaW8gQ28uIEFsbCByaWdodHMgcmVzZXJ2ZWRPdmVyYml0IERFTU8gUmVndWxhck92ZXJiaXQgREVNTwAAAQGHAQABAAAiGQAGAAB6AAADAABoAAAEAAAJBwAbAgAfAAAeAAA8AAA/AQB8AABcAABeAABdAAA9AABfAABnAACgAACAAAChAACcAAB5AAB0AABrAQBjAAGJAACDAABqAAB4AAGKAABzAAByAACFAACXAAGLAABwAQGMAABvAACJAAGNAQCmAAGPBQB+AACIAAGVAACBAACEAACCAACHAAB/AACGAABpAAB3AAB2AAB9AABBAAAIAAB1AAGWAQA+AABCGQARCQAFAAACAAAgAQBgAAB7AAAHAABhAQBkAABmAACqAAClAAGYFABuAAGtAABtAAGuAACeAACbAACjAACuAACrAQCwAACtAACvAACKAAC1AACyAgC5AAC2AgCaAAC6AAC+AAC7AQC/AAC9AACoAACNAADEAADBAgDFAACQAACLAACPAACWAACkAACpAACxAAGvAADLAADIAQDNAADKAADMAADOAADSAADPAgDWAADTAgDXAADbAADYAQDcAADaAACf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BeYGcAZwBnADiAFMAUwCvgAFABf/vwFb/78BXf+/AV//vwF7/78ACwAX/xcAGf9lABr/ZQFb/xcBXf8XAV//FwFt/2UBe/8XAX3/ZQF//2UBgf9lABYABv/JAAr/yQAS/8kAFP/JAMz/yQDN/8kAzv/JAM//yQDQ/8kA0v/JAN7/yQEC/8kBBP/JAQb/yQEI/8kBF//JARn/yQEb/8kBIf/JAUX/yQFH/8kBSf/JAAIAd/+1ATD/tQAyAG8ADwBxAA8AdAAPAHYADwB3/7UAeAAPAHkADwB8AA8AgAAPAJkADwCcAA8A3wAPAOsADwDsAA8A7QAPAO4ADwDwAA8A8QAPAPIADwDzAA8A9AAPAPYADwD8AA8BCwAPAQ0ADwEYAA8BHAAPASIADwElAA8BJwAPASkADwErAA8BMP+1ATIADwEzAA8BNQAPATcADwE5AA8BOwAPAT0ADwFGAA8BSAAPAUoADwFUAA8BVgAPAVgADwFaAA8BeAAPAXoADwGMAA8AMgBvABkAcQAZAHQAGQB2ABkAd//TAHgAGQB5ABkAfAAZAIAAGQCZABkAnAAZAN8AGQDrABkA7AAZAO0AGQDuABkA8AAZAPEAGQDyABkA8wAZAPQAGQD2ABkA/AAZAQsAGQENABkBGAAZARwAGQEiABkBJQAZAScAGQEpABkBKwAZATD/0wEyABkBMwAZATUAGQE3ABkBOQAZATsAGQE9ABkBRgAZAUgAGQFKABkBVAAZAVYAGQFYABkBWgAZAXgAGQF6ABkBjAAZAFAAbwBLAHD/0wBx/90Acv/TAHMALQB0/90AdQAtAHYASwB3/8kAeABLAHkASwB8/90AgP/dAIMADwCEAA8AmQBLAJz/3QDY/9MA3wBLAOb/0wDn/9MA6P/TAOn/0wDq/9MA6wBLAOwASwDtAEsA7gBLAPD/3QDx/90A8v/dAPP/3QD0/90A9v/dAPwASwED/9MBBf/TAQf/0wEJ/9MBC//dAQ3/3QEP/9MBEf/TARP/0wEU/9MBFv/TARj/3QEc/90BHgAtASAALQEi/90BJQBLAScASwEpAEsBKwBLAS4ALQEwAC0BMgBLATMASwE1AEsBNwBLATkASwE7AEsBPQBLAUb/3QFI/90BSv/dAUz/0wFU/90BVv/dAVj/3QFa/90BbgAPAXgASwF6/90BfgAPAYAADwGCAA8BgwAtAYz/3QBEAG8ADwBw/+cAcQAPAHL/5wB0AA8AdgAPAHf/tQB4AA8AeQAPAHwADwCAAA8AmQAPAJwADwDY/+cA3wAPAOb/5wDn/+cA6P/nAOn/5wDq/+cA6wAPAOwADwDtAA8A7gAPAPAADwDxAA8A8gAPAPMADwD0AA8A9gAPAPwADwED/+cBBf/nAQf/5wEJ/+cBCwAPAQ0ADwEP/+cBEf/nARP/5wEU/+cBFv/nARgADwEcAA8BIgAPASUADwEnAA8BKQAPASsADwEw/7UBMgAPATMADwE1AA8BNwAPATkADwE7AA8BPQAPAUYADwFIAA8BSgAPAUz/5wFUAA8BVgAPAVgADwFaAA8BeAAPAXoADwGMAA8AAgB3/5cBMP+XACIAcf/nAHT/5wB3/28AfP/nAID/5wCD/90AhP/dAJn/5wCc/+cA8P/nAPH/5wDy/+cA8//nAPT/5wD2/+cBC//nAQ3/5wEY/+cBHP/nASL/5wEw/28BRv/nAUj/5wFK/+cBVP/nAVb/5wFY/+cBWv/nAW7/3QF6/+cBfv/dAYD/3QGC/90BjP/nAAIAd/+rATD/qwACAHf/vwEw/78AAQChAAYACgAPABIAFAAXAG4AbwBwAHEAcgBzAHQAdQB2AHcAeAB5AHoAewB8AH0AfgB/AIAAgQCCAIMAhACFAIYAhwCZAJwAsQDMAM0AzgDPANAA0gDYAN4A3wDgAOEA4gDjAOQA5QDmAOcA6ADpAOoA6wDsAO0A7gDvAPAA8QDyAPMA9AD2APcA+AD5APoA+wD8AP0A/wEBAQIBAwEEAQUBBgEHAQgBCQELAQ0BDwERARMBFAEWARcBGAEZARoBGwEcAR4BIAEhASIBJAElAScBKQErAS4BMAEyATMBNQE3ATkBOwE9AT8BQQFDAUQBRQFGAUcBSAFJAUoBSwFMAU4BUAFSAVQBVgFYAVoBWwFcAV0BXgFfAWABYgFkAWYBaAFqAWwBbgFwAXMBdQF3AXgBegF7AXwBfgGAAYIBgwGFAYoBjAAAAAEAAAAKAKgCrAADREZMVAAUZ3JlawAubGF0bgBIAAQAAAAA//8ACAAAAAUACgAPABQAGwAgACUABAAAAAD//wAIAAQACQANABAAFQAcACEAKAAQAAJNT0wgACZST00gAD4AAP//AAgAAwAGAAsAEwAYAB8AJAApAAD//wAJAAEABwAMABIAFgAZAB0AIgAmAAD//wAJAAIACAAOABEAFwAaAB4AIwAnACphYWx0AP5hYWx0AQZhYWx0AQ5hYWx0ARZhYWx0AR5jYXNlASZjYXNlASxjYXNlATJjYXNlAThjYXNlAT5mcmFjAURmcmFjAUpmcmFjAVBmcmFjAVZmcmFjAVxoaXN0AWJoaXN0AWhoaXN0AW5oaXN0AXRoaXN0AXpsaWdhAYBsaWdhAYZsaWdhAYxsaWdhAZJsaWdhAZhsb2NsAZ5sb2NsAaRvcmRuAapvcmRuAbBvcmRuAbZvcmRuAbxvcmRuAcJzYWx0AchzYWx0Ac5zYWx0AdRzYWx0AdpzYWx0AeBzdXBzAeZzdXBzAexzdXBzAfJzdXBzAfhzdXBzAf4AAAACAAAAAQAAAAIAAAABAAAAAgAAAAEAAAACAAAAAQAAAAIAAAABAAAAAQAKAAAAAQAKAAAAAQAKAAAAAQAKAAAAAQAKAAAAAQAFAAAAAQAFAAAAAQAFAAAAAQAFAAAAAQAFAAAAAQAJAAAAAQAJAAAAAQAJAAAAAQAJAAAAAQAJAAAAAQAIAAAAAQAIAAAAAQAIAAAAAQAIAAAAAQAIAAAAAQACAAAAAQADAAAAAQAGAAAAAQAGAAAAAQAGAAAAAQAGAAAAAQAGAAAAAQAHAAAAAQAHAAAAAQAHAAAAAQAHAAAAAQAHAAAAAQAEAAAAAQAEAAAAAQAEAAAAAQAEAAAAAQAEAAwAGgAiACoAMgA6AEIASgBUAFwAZABsAHQAAQAAAAEAYgADAAAAAQCsAAEAAAABALgAAQAAAAEAygABAAAAAQDcAAQAAAABAOQABgAAAAIBLgFSAAMAAAABAWwABAAAAAEBdgABAAAAAQG4AAEAAAABAbwAAQAAAAEB6gACACoAEgCpAKsAqgCoAKMApQCkAKYAogCsAXgA2wDcAN0BeQF6AXsBfAABABIAMwA7AEQAWwBeAF8AYABiAGMAZwCAAIkAigCLAVcBWAFbAVwAAQAOAAEACAACAKEApwABAAEAXAACAA4ABAF5AXoBewF8AAEABAFXAVgBWwFcAAIADgAEAXkBegF7AXwAAQAEAVcBWAFbAVwAAQAGAFIAAQADAIkAigCLAAEASgACAAoANAAEAAoAEgAaACIAuQADACoAigC4AAMAKgCMALkAAwBCAIoAuAADAEIAjAACAAYADgC6AAMAKgCMALoAAwBCAIwAAQACAIkAiwADAAEAEgABABwAAAABAAAACwACAAEAiACRAAAAAQACAAQAbgADAAEAEgABABwAAAABAAAACwACAAEAiACRAAAAAQACABIAfAABAAwAAQAIAAEAoQABAAEAXAABAEIAAgAKADgABQAMABQAHAAiACgAswADAHMAdgCyAAMAcwB5ALUAAgBzALYAAgB2ALQAAgB5AAEABACxAAIAgQABAAIAcwF4AAEABgD4AAEAAQCAAAIAHAALAKkAqwCqAKgApwCjAKUApACmAKIArAABAAsAMwA7AEQAWwBcAF4AXwBgAGIAYwBnAAIADgAEANkA2gDZANoAAQAEAAQAEgBuAHwAAAABAAAAAA==) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Overbit', monospace; }
+  html, body { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background:#000; overflow:hidden; }
+  body { display:flex; justify-content:center; align-items:center; touch-action:none; color: #fff; user-select: none; -webkit-user-select: none; }
+  canvas { display:block; }
+  
+  /* Graphics Quality Settings */
+  body.gfx-low canvas { filter: none !important; }
+  body.gfx-normal canvas { filter: drop-shadow(0 0 6px #00ff00) drop-shadow(0 0 3px #0099ff); }
+  body.gfx-high canvas { filter: drop-shadow(0 0 14px #00ff00) drop-shadow(0 0 10px #0099ff) drop-shadow(0 0 8px #ff00ff) brightness(1.12); }
+
+  /* Shop UI Overlay */
+  #shop-ui {
+    /* Lifted to 18% to perfectly clear the bottom 15% menu tap zone */
+    display: none; position: absolute; bottom: 18%; left: 20px; z-index: 10;
+    flex-direction: column; gap: 8px; font-family: 'Overbit', monospace;
+  }
+  #shop-ui .row { display: flex; align-items: center; gap: 8px; }
+  #shop-ui span { color: #00ff88; font-weight: bold; font-size: 11px; text-shadow: 0 0 5px #00ff88; }
+  #shop-ui .row.glow-row span { color: #ff66ff; text-shadow: 0 0 5px #ff66ff; }
+  #shop-ui .row.glow-row input[type=range] { accent-color: #ff66ff; }
+  input[type=range] { accent-color: #00ff88; cursor: pointer; width: 100px; }
+
+  /* Pause-only glow intensity slider */
+  #pause-ui {
+    display: none; position: absolute; bottom: 8%; right: 20px; z-index: 10;
+    align-items: center; gap: 8px; font-family: 'Overbit', monospace;
+  }
+  #pause-ui span { color: #ff66ff; font-weight: bold; font-size: 11px; text-shadow: 0 0 5px #ff66ff; }
+  #pause-ui input[type=range] { accent-color: #ff66ff; }
+
+  /* Landscape lock: blocks play and prompts rotation whenever the device is portrait */
+  #rotate-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    background: #000; color: #fff; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 20px; gap: 16px;
+  }
+  body.portrait-block #rotate-overlay { display: flex; }
+  #rotate-overlay .icon { font-size: 56px; animation: rotateHint 1.4s ease-in-out infinite; }
+  #rotate-overlay p { font-size: 16px; max-width: 280px; line-height: 1.4; color: #00e5ff; }
+  @keyframes rotateHint {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+<div id="rotate-overlay">
+  <div class="icon">📱</div>
+  <p>Rotate your device to landscape to play FLYING BIRDS</p>
+</div>
+
+<canvas id="c"></canvas>
+
+<div id="shop-ui">
+    <div class="row">
+        <span>🎵 VOL</span>
+        <input type="range" id="music-slider" min="0" max="1" step="0.01">
+    </div>
+    <div class="row glow-row">
+        <span>✨ GLOW</span>
+        <input type="range" id="glow-slider-shop" min="0" max="3" step="0.05">
+    </div>
+</div>
+
+<div id="pause-ui">
+    <span>✨ GLOW</span>
+    <input type="range" id="glow-slider" min="0" max="3" step="0.05">
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const shopUi = document.getElementById('shop-ui');
+const musicSlider = document.getElementById('music-slider');
+const pauseUi = document.getElementById('pause-ui');
+const glowSlider = document.getElementById('glow-slider');
+const shopGlowSlider = document.getElementById('glow-slider-shop');
+
+let W, H;
+let orientationBlocked = false;
+function checkOrientation() {
+  orientationBlocked = window.innerHeight > window.innerWidth;
+  document.body.classList.toggle('portrait-block', orientationBlocked);
+}
+function resize() {
+  W = Math.min(window.innerWidth, 600);
+  H = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+  checkOrientation();
+  // The canvas is centered in the body and capped at 600px wide, so on a
+  // wide landscape screen there can be empty margin on either side. The
+  // shop UI (volume slider) is a real HTML element outside the canvas, so
+  // anchor it to the canvas's actual left edge instead of the raw screen
+  // edge or it can end up sitting in that empty margin.
+  const canvasLeft = (window.innerWidth - W) / 2;
+  shopUi.style.left = (canvasLeft + 20) + 'px';
+  pauseUi.style.right = (canvasLeft + 20) + 'px';
+}
+resize();
+window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', resize);
+if (window.visualViewport) window.visualViewport.addEventListener('resize', resize);
+
+// ─── Save Data ───
+const SAVE_VERSION = 99; 
+let save = {};
+try {
+  const raw = JSON.parse(localStorage.getItem('neonSave')) || {};
+  if (raw.version !== SAVE_VERSION) {
+    localStorage.removeItem('neonSave');
+    save = {};
+  } else {
+    save = raw;
+  }
+} catch (e) {
+  save = {};
+}
+if (save.gems === undefined) save.gems = 0;
+if (!save.unlocked) save.unlocked = [0];
+if (save.maxLevel === undefined) save.maxLevel = 1;
+if (save.musicEnabled === undefined) save.musicEnabled = false;
+if (!save.graphicsQuality) save.graphicsQuality = 'normal';
+if (save.musicVolume === undefined) save.musicVolume = 0.5;
+if (save.glowIntensity === undefined) {
+  save.glowIntensity = save.pipeGlowIntensity !== undefined ? save.pipeGlowIntensity : 1;
+}
+if (!save.difficulty) save.difficulty = 'normal';
+if (!save.maxLevelByDiff) {
+  // Migrate old single maxLevel progress into "normal" mode so existing
+  // players don't lose what they already unlocked; easy/hard start fresh
+  // since they're brand new, independent progression tracks.
+  save.maxLevelByDiff = { easy: 1, normal: Math.max(1, save.maxLevel || 1), hard: 1 };
+}
+if (!save.hybrids) save.hybrids = [];
+if (!save.nextHybridId) save.nextHybridId = 100;
+if (save.curSkinIdx === undefined) save.curSkinIdx = 0;
+if (!save.highScores) save.highScores = { normal: 0, hard: 0 };
+if (!save.lastFreeplayScore) save.lastFreeplayScore = { normal: 0, hard: 0 };
+if (!save.upgrades) save.upgrades = {};
+if (save.cullerEnabled === undefined) save.cullerEnabled = false;
+function getUpgrades(skinId) {
+  if (!save.upgrades[skinId]) save.upgrades[skinId] = { shield:0, coin:0, coinpipe:0 };
+  // migrate old 'slow' upgrade saves
+  if (save.upgrades[skinId].slow !== undefined) { save.upgrades[skinId].coinpipe = save.upgrades[skinId].coinpipe || 0; delete save.upgrades[skinId].slow; }
+  return save.upgrades[skinId];
+}
+const UPGRADE_BASE = { shield: 9000, coin: 11000, coinpipe: 4667 };
+const UPGRADE_STEP = 150;
+function upgradeCost(type, skinId) {
+  return UPGRADE_BASE[type] + (getUpgrades(skinId)[type] || 0) * UPGRADE_STEP;
+}
+save.hybrids.forEach(h => {
+  if (!h.readyAt) { h.startedAt = Date.now() - 1; h.readyAt = Date.now() - 1; }
+});
+save.version = SAVE_VERSION;
+
+// ─── Procedural Web Audio API Engine ───
+let audioCtx = null;
+let masterGain = null;
+let bgmGain = null; 
+let bgmStep = 0;
+let lastBgmStepTime = 0;
+const bgmTempo = 0.15; 
+const mainBgmSequence = [220, 220, 293, 329, 392, 329, 293, 220, 220, 293, 440, 392, 329, 293, 220, 196]; 
+const bassBgmSequence = [110, 110, 110, 110, 98, 98, 98, 98, 110, 110, 146, 146, 98, 98, 73, 73];
+
+function initAudioContext() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    masterGain = audioCtx.createGain();
+    masterGain.connect(audioCtx.destination);
+    masterGain.gain.setValueAtTime(1.0, audioCtx.currentTime); 
+    
+    bgmGain = audioCtx.createGain();
+    bgmGain.connect(masterGain);
+    bgmGain.gain.setValueAtTime(save.musicVolume, audioCtx.currentTime);
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+}
+
+function tickBgm() {
+  if (!audioCtx || audioCtx.state === 'suspended') return;
+  let now = audioCtx.currentTime;
+  
+  if (save.musicEnabled && state !== ST.DEAD && state !== ST.WIN) {
+    if (now - lastBgmStepTime > bgmTempo) {
+      playBgmNote(now);
+      lastBgmStepTime = now;
+    }
+  }
+}
+
+function playHat(time, vol) {
+  const bufferSize = audioCtx.sampleRate * 0.04;
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+  const noise = audioCtx.createBufferSource();
+  noise.buffer = buffer;
+  const filt = audioCtx.createBiquadFilter();
+  filt.type = 'highpass'; filt.frequency.setValueAtTime(6000, time);
+  const g = audioCtx.createGain();
+  g.gain.setValueAtTime(vol, time);
+  g.gain.linearRampToValueAtTime(0, time + 0.04);
+  noise.connect(filt); filt.connect(g); g.connect(bgmGain); 
+  noise.start(time);
+}
+
+function playBgmNote(time) {
+  const osc = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  osc.connect(gainNode);
+  gainNode.connect(bgmGain); 
+  osc.type = 'square'; 
+  let freq = mainBgmSequence[bgmStep % mainBgmSequence.length];
+  if (P.slow && state === ST.PLAY) freq *= 0.7;
+  osc.frequency.setValueAtTime(freq, time);
+  gainNode.gain.setValueAtTime(0.30, time);
+  gainNode.gain.linearRampToValueAtTime(0.10, time + bgmTempo - 0.02);
+  gainNode.gain.linearRampToValueAtTime(0, time + bgmTempo);
+  osc.start(time); osc.stop(time + bgmTempo);
+
+  if (bgmStep % 2 === 0) {
+    const bassOsc = audioCtx.createOscillator();
+    const bassGain = audioCtx.createGain();
+    bassOsc.connect(bassGain); bassGain.connect(bgmGain); 
+    bassOsc.type = 'triangle';
+    let bassFreq = bassBgmSequence[Math.floor(bgmStep/2) % bassBgmSequence.length];
+    if (P.slow && state === ST.PLAY) bassFreq *= 0.7;
+    bassOsc.frequency.setValueAtTime(bassFreq, time);
+    bassGain.gain.setValueAtTime(0.40, time);
+    bassGain.gain.linearRampToValueAtTime(0, time + bgmTempo*2 - 0.02);
+    bassOsc.start(time); bassOsc.stop(time + bgmTempo*2);
+  }
+
+  playHat(time, bgmStep % 4 === 0 ? 0.22 : 0.14);
+  bgmStep++;
+}
+
+function sfx(type) {
+  initAudioContext();
+  if (!audioCtx || audioCtx.state === 'suspended') return;
+  const now = audioCtx.currentTime;
+  const osc = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  osc.connect(gainNode);
+  gainNode.connect(masterGain); 
+
+  if (type === 'flap') {
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(180, now);
+    osc.frequency.exponentialRampToValueAtTime(360, now + 0.08);
+    gainNode.gain.setValueAtTime(0.2, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + 0.08);
+    osc.start(now); osc.stop(now + 0.08);
+  } else if (type === 'score') {
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(587.33, now); 
+    osc.frequency.setValueAtTime(880, now + 0.06); 
+    gainNode.gain.setValueAtTime(0.1, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + 0.15);
+    osc.start(now); osc.stop(now + 0.15);
+  } else if (type === 'coin') {
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(987.77, now); 
+    osc.frequency.setValueAtTime(1468.24, now + 0.08); 
+    gainNode.gain.setValueAtTime(0.12, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + 0.22);
+    osc.start(now); osc.stop(now + 0.22);
+  } else if (type === 'crash' || type === 'boom') {
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(100, now);
+    osc.frequency.exponentialRampToValueAtTime(10, now + 0.4);
+    const osc2 = audioCtx.createOscillator();
+    osc2.type = 'square';
+    osc2.frequency.setValueAtTime(50, now);
+    osc2.frequency.exponentialRampToValueAtTime(5, now + 0.4);
+    osc2.connect(gainNode);
+    osc2.start(now); osc2.stop(now + 0.4);
+    gainNode.gain.setValueAtTime(0.5, now);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+    osc.start(now); osc.stop(now + 0.4);
+  } else if (type === 'ui') {
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(520, now);
+    osc.frequency.setValueAtTime(740, now + 0.04);
+    gainNode.gain.setValueAtTime(0.1, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + 0.06);
+    osc.start(now); osc.stop(now + 0.06);
+  } else if (type === 'shield' || type === 'pu') {
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(440, now);
+    osc.frequency.exponentialRampToValueAtTime(1200, now + 0.2);
+    gainNode.gain.setValueAtTime(0.15, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + 0.2);
+    osc.start(now); osc.stop(now + 0.2);
+  } else if (type === 'laserboom') {
+    // A bigger, louder, more layered explosion than the standard crash -
+    // a sharp crack up front, a deep rumbling bass drop, and a mid-range
+    // growl layered together for a "very cool and loud" effect.
+    const crack = audioCtx.createOscillator();
+    const crackGain = audioCtx.createGain();
+    crack.type = 'square'; crack.connect(crackGain); crackGain.connect(masterGain);
+    crack.frequency.setValueAtTime(900, now);
+    crack.frequency.exponentialRampToValueAtTime(80, now + 0.09);
+    crackGain.gain.setValueAtTime(0.55, now);
+    crackGain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+    crack.start(now); crack.stop(now + 0.1);
+
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(160, now);
+    osc.frequency.exponentialRampToValueAtTime(8, now + 0.65);
+    gainNode.gain.setValueAtTime(0.65, now);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.65);
+    osc.start(now); osc.stop(now + 0.65);
+
+    const growl = audioCtx.createOscillator();
+    const growlGain = audioCtx.createGain();
+    growl.type = 'square'; growl.connect(growlGain); growlGain.connect(masterGain);
+    growl.frequency.setValueAtTime(70, now);
+    growl.frequency.exponentialRampToValueAtTime(4, now + 0.55);
+    growlGain.gain.setValueAtTime(0.5, now + 0.03);
+    growlGain.gain.exponentialRampToValueAtTime(0.01, now + 0.58);
+    growl.start(now + 0.03); growl.stop(now + 0.58);
+  } else if (type === 'win') {
+    const notes = [523.25, 659.25, 783.99, 1046.5];
+    notes.forEach((f, i) => {
+      const t = now + i * 0.1;
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.connect(g); g.connect(masterGain);
+      o.type = 'square';
+      o.frequency.setValueAtTime(f, t);
+      g.gain.setValueAtTime(0.001, t);
+      g.gain.linearRampToValueAtTime(0.16, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+      o.start(t); o.stop(t + 0.32);
+    });
+  }
+}
+
+// ─── Slider UI Logic ───
+musicSlider.addEventListener('input', (e) => {
+    save.musicVolume = parseFloat(e.target.value);
+    if (bgmGain && audioCtx) {
+        bgmGain.gain.setValueAtTime(save.musicVolume, audioCtx.currentTime);
+    }
+    saveGame();
+});
+
+musicSlider.addEventListener('pointerdown', e => e.stopPropagation());
+musicSlider.addEventListener('touchstart', e => e.stopPropagation());
+
+glowSlider.addEventListener('input', (e) => {
+    save.glowIntensity = parseFloat(e.target.value);
+    shopGlowSlider.value = save.glowIntensity;
+    saveGame();
+});
+glowSlider.addEventListener('pointerdown', e => e.stopPropagation());
+glowSlider.addEventListener('touchstart', e => e.stopPropagation());
+
+shopGlowSlider.addEventListener('input', (e) => {
+    save.glowIntensity = parseFloat(e.target.value);
+    glowSlider.value = save.glowIntensity;
+    saveGame();
+});
+shopGlowSlider.addEventListener('pointerdown', e => e.stopPropagation());
+shopGlowSlider.addEventListener('touchstart', e => e.stopPropagation());
+
+// ─── Skins & Game Data ───
+const SKINS = [
+  {id:0, name:"NEON", desc:"Standard balanced ship.", cost:0, col:"#00e5ff", abil:"none"},
+  {id:1, name:"ROCK BIRD", desc:"Survive 1 crash.", cost:50, col:"#88aa88", abil:"life"},
+  {id:2, name:"FLARE BIRD", desc:"Leaves a massive fire trail.", cost:100, col:"#ff4400", abil:"fire"},
+  {id:3, name:"ICE BIRD", desc:"Slows time constantly by 0.9x.", cost:150, col:"#00aaff", abil:"slow"},
+  {id:4, name:"NINJA", desc:"20% smaller hitbox.", cost:200, col:"#ff00ff", abil:"small"},
+  {id:5, name:"MAGNET", desc:"Attracts coins from afar.", cost:250, col:"#ffff00", abil:"magnet"},
+  {id:6, name:"GOLDEN", desc:"Coins are worth double.", cost:350, col:"#ffd700", abil:"gold"},
+  {id:7, name:"PHANTOM", desc:"Pulses invincible for 4s every 10s.", cost:500, col:"#ffffff", abil:"pulse"},
+  {id:8, name:"TANK", desc:"Slower fall speed.", cost:700, col:"#00ff00", abil:"float"},
+  {id:9, name:"VOID RAY", desc:"Max speed, coins x5. Tap the orb: +2 score & clears the screen.", cost:1000, col:"#4400ff", abil:["speed","coinx5","nova"]},
+  {id:10, name:"GODZILLA", desc:"2 lives, coins x6. Tap orb: beam destroys 4-6 pillars.", cost:100000, col:"#ff0000", glowCol:"#aa00ff", abil:["life2","coinx6","laser"], noFuse:true}
+];
+
+// Returns true if a skin has the given ability. Skins normally have a single
+// string ability, but hybrid skins (combined from two parent birds) carry an
+// array of abilities, so this checks both shapes the same way everywhere.
+function hasAbil(skin, name) {
+  if (!skin) return false;
+  return Array.isArray(skin.abil) ? skin.abil.includes(name) : skin.abil === name;
+}
+// A hybrid with no readyAt (created before the fusion-timer feature) is
+// treated as already ready, so older saves aren't punished retroactively.
+function hybridIsReady(h) {
+  return !h.readyAt || Date.now() >= h.readyAt;
+}
+// Base skins plus any player-created hybrid skins that have finished fusing,
+// merged for normal browsing/equipping. Still-fusing hybrids are only shown
+// in the dedicated MY HYBRIDS screen until they're ready.
+function getAllSkins() {
+  const ready = (save.hybrids || []).filter(hybridIsReady);
+  return ready.length ? SKINS.concat(ready) : SKINS;
+}
+// Averages two hex colors together for a hybrid skin's blended color.
+function blendColors(hexA, hexB) {
+  const a = parseInt(hexA.slice(1), 16), b = parseInt(hexB.slice(1), 16);
+  const r = Math.round(((a>>16 & 255) + (b>>16 & 255)) / 2);
+  const g = Math.round(((a>>8 & 255) + (b>>8 & 255)) / 2);
+  const bl = Math.round(((a & 255) + (b & 255)) / 2);
+  return '#' + [r,g,bl].map(v => v.toString(16).padStart(2,'0')).join('');
+}
+
+let curSkinIdx = save.curSkinIdx;
+let storeViewIdx = 0;
+let shopMsg = "";
+let shopMsgIsError = false;
+let upgradePickIdx = 0;
+let upgradeSelectedId = 0;
+
+// ─── Difficulty Modes (controls bird/world speed only) ───
+const DIFFS = [
+  { id: 'easy',   label: 'EASY',   col: '#2979ff', mult: 0.72 },
+  { id: 'normal', label: 'NORMAL', col: '#39ff14', mult: 1.00 },
+  { id: 'hard',   label: 'HARD',   col: '#ff2d2d', mult: 1.35 }
+];
+function getDiff(id) { return DIFFS.find(d => d.id === id) || DIFFS[1]; }
+let pendingDifficulty = save.difficulty || 'normal';
+
+function diffButtonRect(i) {
+  const colW = W / DIFFS.length;
+  const bx = colW * i + colW / 2;
+  const by = H * 0.54;
+  const w = colW * 0.8;
+  const h = H * 0.36;
+  return { bx, by, w, h, left: bx - w/2, right: bx + w/2, top: by - h/2, bottom: by + h/2 };
+}
+function diffConfirmBtn() {
+  return { x: W * 0.92, y: H * 0.15, r: Math.max(22, Math.min(W, H) * 0.075) };
+}
+
+// ─── Hybrid Lab ───
+const HYBRID_COST = 15000;
+let hybridSlotA = -1, hybridSlotB = -1; // skin ids (0-9, base skins only) or -1 if unpicked
+let hybridViewIdx = 0;
+function hybridSlotRect(side) {
+  // side: 'a' (left) or 'b' (right)
+  const w = W * 0.32, h = H * 0.36;
+  const bx = side === 'a' ? W * 0.22 : W * 0.78;
+  const by = H * 0.46;
+  return { bx, by, w, h, left: bx - w/2, right: bx + w/2, top: by - h/2, bottom: by + h/2 };
+}
+function hybridConfirmBtn() {
+  // A big, wide, unmistakable button instead of a small corner icon - this
+  // sits right below the cost text where players naturally look to confirm.
+  const w = Math.min(220, W * 0.4), h = Math.max(38, H * 0.13);
+  const cx = W * 0.5, cy = H * 0.855;
+  return { x: cx, y: cy, w, h, left: cx - w/2, right: cx + w/2, top: cy - h/2, bottom: cy + h/2 };
+}
+// VOID RAY's active "nova" ability button - bottom-right corner during PLAY,
+// well clear of the main flap-tap area and the top HUD.
+function voidRayBtnRect() {
+  return { x: W - 38, y: H - 38, r: Math.max(22, Math.min(W, H) * 0.07) };
+}
+// GODZILLA's active "laser" ability button - same slot as nova, since a
+// player only ever has one active-ability skin equipped at a time.
+function laserBtnRect() {
+  return { x: W - 38, y: H - 38, r: Math.max(22, Math.min(W, H) * 0.07) };
+}
+// Pause button - small, top-left, clear of the main flap-tap area.
+function pauseBtnRect() {
+  return { x: 26, y: 26, r: Math.max(15, Math.min(W, H) * 0.045) };
+}
+// Cycles a hybrid slot to the next owned base skin, skipping the other slot's pick.
+function cycleHybridSlot(current, other) {
+  const owned = SKINS.filter(s => save.unlocked.includes(s.id)).map(s => s.id);
+  if (owned.length === 0) return -1;
+  let idx = owned.indexOf(current);
+  for (let n = 0; n < owned.length; n++) {
+    idx = (idx + 1) % owned.length;
+    if (owned[idx] !== other) return owned[idx];
+  }
+  return current;
+}
+const HYBRID_FUSE_MS = 60 * 60 * 1000; // 1 hour, real wall-clock time
+function performHybrid() {
+  const a = SKINS.find(s => s.id === hybridSlotA);
+  const b = SKINS.find(s => s.id === hybridSlotB);
+  if (!a || !b || a.id === b.id || save.gems < HYBRID_COST) return;
+  if (a.noFuse || b.noFuse) return;
+
+  const abilA = Array.isArray(a.abil) ? a.abil : [a.abil];
+  const abilB = Array.isArray(b.abil) ? b.abil : [b.abil];
+  let combinedAbil = [...new Set([...abilA, ...abilB])].filter(x => x !== 'none');
+  if (combinedAbil.length === 0) combinedAbil = ['none'];
+
+  const newId = save.nextHybridId++;
+  const now = Date.now();
+  const hybrid = {
+    id: newId,
+    name: `${a.name} x ${b.name}`,
+    desc: `Hybrid: combines ${a.name} & ${b.name}'s abilities.`,
+    cost: 0,
+    col: blendColors(a.col, b.col),
+    abil: combinedAbil,
+    startedAt: now,
+    readyAt: now + HYBRID_FUSE_MS
+  };
+  // Saved immediately with absolute timestamps (not a frame counter), so
+  // fusion progress is based on real time and keeps ticking even while the
+  // app is closed - reopening just compares Date.now() against readyAt.
+  save.hybrids.push(hybrid);
+  save.unlocked.push(newId);
+  save.gems -= HYBRID_COST;
+  saveGame();
+  sfx('win'); flash(0.7, '255,255,255');
+  burst(W/2, H/2, hybrid.col, 50, 9);
+  hybridSlotA = -1; hybridSlotB = -1;
+  shopMsg = "FUSION STARTED - READY IN 1 HOUR"; shopMsgIsError = false;
+  setGameState(ST.STORE);
+}
+
+// ─── State Controls ───
+const ST = { MENU:0, STORE:1, LEVELS:2, PLAY:3, DEAD:4, WIN:5, DIFF:6, HYBRID:7, HYBRIDLIST:8, FPSCORE:9, SPLASH:10, FPMENU:11, UPGRADES:12, UPGRADEPICK:13, RESETCONFIRM:14, RESETCONFIRM2:15 };
+let state = ST.SPLASH;
+let splashFrame = 0;
+// Hard safety net, completely independent of the animation-frame loop: no
+// matter what happens with rendering/timing, this guarantees the splash
+// can never get stuck and the menu becomes reachable within 5.5s.
+setTimeout(() => { if (state === ST.SPLASH) state = ST.MENU; }, 5500);
+let lastStateChange = 0; 
+
+function setGameState(newState) {
+  state = newState;
+  lastStateChange = Date.now(); 
+  
+  if (state === ST.STORE) {
+      shopUi.style.display = 'flex';
+      musicSlider.value = save.musicVolume;
+      shopGlowSlider.value = save.glowIntensity;
+  } else {
+      shopUi.style.display = 'none';
+  }
+}
+
+let score=0, targetScore=0, level=0, frame=0, speed=4.0;
+let shX=0, shY=0, deadT=0, bgFlash=0, bgFlashColor='255,255,255';
+function flash(intensity, color) { bgFlash = intensity; bgFlashColor = color || '255,255,255'; }
+
+let levelScrollY = 0, targetScrollY = 0;
+function levelScrollbarTrack() {
+  return { x: W*0.95, top: H*0.14, bottom: H*0.8 };
+}
+function levelMaxScrollAbs() {
+  return (17 * (H/7)) - H/2;
+}
+function scrollFromTrackY(y) {
+  const track = levelScrollbarTrack();
+  let progress = (y - track.top) / (track.bottom - track.top);
+  progress = Math.max(0, Math.min(1, progress));
+  return -progress * levelMaxScrollAbs();
+}
+let touchY = 0, isDragging = false;
+let isDraggingScrollbar = false, dragMoved = false, pendingTapX = 0, pendingTapY = 0;
+
+const P = { x:0, y:0, vy:0, r:15, trail:[], shield:false, shieldT:0, slow:false, slowT:0, alive:true, ang:0, lives:0, startSlowT:0, scale:1, invinc:0, pulseTimer:0, novaCD:0, laserCD:0, laserFlashT:0 };
+const NOVA_COOLDOWN = 720; // 12 seconds at 60fps - VOID RAY's active "screen clear" ability
+const LASER_COOLDOWN = 600; // 10 seconds at 60fps - GODZILLA's active "laser" ability, unlimited uses (cooldown-gated only)
+
+let pipes=[], coins=[], pups=[], parts=[], stars=[], floaters=[], mountains=[], floatingTexts=[], speedLines=[];
+let gridX = 0;
+
+function saveGame() { try { localStorage.setItem('neonSave', JSON.stringify(save)); } catch (e) {} }
+
+// Increments score and checks the win condition - shared by normal pipe
+// scoring and VOID RAY's nova ability so a nova-triggered score jump can
+// also correctly trigger WIN if it crosses the level's target.
+function addScore(n, raw) {
+  const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  if (!raw && hasAbil(sInfo, 'laser')) n *= 2; // Godzilla 2x score (pipes only, not ability)
+  const coinUpg = getUpgrades(curSkinIdx).coin || 0;
+  if (!raw && coinUpg > 0) n = Math.round(n * Math.pow(1.1, coinUpg));
+  score += n;
+  if (level > 0 && score >= targetScore && state === ST.PLAY) {
+    const dk = save.difficulty || 'normal';
+    setGameState(ST.WIN); save.maxLevelByDiff[dk] = Math.max(save.maxLevelByDiff[dk], level+1); saveGame(); flash(0.8); sfx('win');
+  }
+}
+
+function applyGraphicsQuality() {
+  const quality = save.graphicsQuality || 'normal';
+  document.body.classList.remove('gfx-low', 'gfx-normal', 'gfx-high');
+  document.body.classList.add('gfx-' + quality);
+}
+
+function gfxLevel() {
+  const q = save.graphicsQuality || 'normal';
+  return q === 'low' ? 0 : q === 'high' ? 2 : 1;
+}
+
+function initEnvironment() {
+  stars = Array.from({length:100}, ()=>({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*2+0.3, spd:Math.random()*0.8+0.2, b:Math.random() }));
+  floaters = Array.from({length:12},()=>({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*120+60, spd:Math.random()*0.4+0.1, hue:Math.random()*360, a:Math.random()*0.05+0.05 }));
+  mountains = Array.from({length:15}, (_, i)=>({ x: i*80, y: H - (Math.random()*150 + 50) }));
+  speedLines = Array.from({length:25}, ()=>({ x:Math.random()*W, y:Math.random()*H, l:Math.random()*100+50, spd:Math.random()*10+10, a:Math.random()*0.15 }));
+}
+
+function resetPlay(lvl) {
+  score=0; frame=0; shX=0; shY=0; deadT=0; level=lvl; bgFlash=0; bgFlashColor='255,255,255';
+  pipes=[]; coins=[]; pups=[]; parts=[]; floatingTexts=[];
+  
+  const activeSkin = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  
+  P.r = hasAbil(activeSkin, 'small') ? 12 : 15;
+  P.lives = hasAbil(activeSkin, 'life2') ? 2 : (hasAbil(activeSkin, 'life') ? 1 : 0);
+  P.shield = hasAbil(activeSkin, 'shield'); P.shieldT = P.shield ? 9999 : 0;
+  P.scale = 1; P.invinc = 0;
+  P.startSlowT = 120;
+  P.pulseTimer = 0;
+  P.novaCD = 0;
+  P.laserCD = 0;
+  P.laserFlashT = 0;
+  P.pipeSpawnSuppress = 0;
+  setPaused(false);
+
+  let baseSpeed = 4.0 + (lvl * 0.15);
+  if (hasAbil(activeSkin, 'speed')) baseSpeed += 1.5;
+  speed = baseSpeed * getDiff(save.difficulty).mult;
+  targetScore = lvl === 0 ? Infinity : 5 + (lvl * 4);
+
+  P.x=W*0.27; P.y=H/2; P.vy=0; P.trail=[]; P.slow=false; P.slowT=0; P.alive=true; P.ang=0;
+  setGameState(ST.PLAY);
+}
+
+function spawnPipe() {
+  // Exact same gap-size formula as the vertical/portrait version - untouched,
+  // so the difficulty/feel matches vertical exactly instead of being shrunk.
+  let gap = Math.max(135, 170 - (level * 5) - (score * 1.5));
+  // Vertical mode used a fixed 70px margin on a tall screen (~800px), which is
+  // fine there but would eat most of a short landscape screen. Scale the
+  // margin down for landscape instead of touching the gap itself, so there's
+  // still real room left over to randomize the pipe's vertical position.
+  const margin = Math.max(18, H * 0.06);
+  // Only clamp the gap on screens so short the gap genuinely wouldn't fit -
+  // this never kicks in on normal landscape screens, only extreme edge cases.
+  const maxGap = Math.max(70, H - margin * 2 - 24);
+  gap = Math.min(gap, maxGap);
+  const range = Math.max(24, H - gap - margin * 2);
+  const gy = margin + Math.random() * range;
+  const hue = (160 + score * 15 + level*40) % 360;
+  pipes.push({ x:W+56, w:50, gy, gap, passed:false, hue, hit:false, destroyed:false });
+
+  const diffId = save.difficulty || 'normal';
+  let n;
+  if (diffId === 'easy') n = 1;
+  else if (diffId === 'hard') n = 3 + Math.floor(Math.random()*3); // 3,4,5
+  else n = 1 + Math.floor(Math.random()*3); // normal - unchanged
+  for (let i=0;i<n;i++) {
+    coins.push({ x:W+80+Math.random()*70, y:gy+16+Math.random()*(gap-32), r:9, ph:Math.random()*Math.PI*2, done:false, spawnFrame:frame });
+  }
+  if (Math.random()<0.12) pups.push({ x:W+110, y:gy+gap/2, type:Math.random()<0.5?'shield':'slow', r:13, ph:Math.random()*Math.PI*2, done:false });
+}
+
+function burst(x, y, col, n=12, spd=4) {
+  const lvl = gfxLevel();
+  const mult = lvl === 0 ? 0 : lvl === 2 ? 2.2 : 1;
+  n = Math.round(n * mult);
+  for (let i=0;i<n;i++) {
+    const a = (i/n)*Math.PI*2, s=spd*(0.4+Math.random()*0.8);
+    parts.push({ x, y, vx:Math.cos(a)*s, vy:Math.sin(a)*s, r:Math.random()*4+1.5, life:1, dec:0.03+Math.random()*0.02, col });
+  }
+}
+
+function addPopText(x, y, txt, col) {
+  floatingTexts.push({x, y, txt, col, life: 1.0, vy: -1.5});
+}
+
+function update() {
+  const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  let dt = (P.slow && state===ST.PLAY) ? 0.4 : 1;
+  if (hasAbil(sInfo, 'slow')) dt *= 0.9;
+  
+  if (bgFlash > 0) bgFlash -= 0.05 * dt;
+  if (P.invinc > 0) P.invinc -= dt;
+
+  if (P.startSlowT > 0 && state === ST.PLAY) {
+    P.startSlowT--;
+    dt *= 0.1; 
+    if (P.startSlowT === 0) { sfx('score'); addPopText(W/2, H/2, "GO!", "#00ffff"); flash(0.5); }
+  }
+
+  frame++;
+  if (state === ST.LEVELS) levelScrollY += (targetScrollY - levelScrollY) * 0.2;
+
+  gridX -= speed * dt * 0.8; if (gridX < -60) gridX += 60;
+  mountains.forEach(m => { 
+    m.x -= speed * dt * 0.4; 
+    if(m.x < -100) { m.x = W+80; m.y = H - (Math.random()*150 + 50) };
+  });
+  
+  shX *= 0.78; shY *= 0.78;
+  P.scale += (1 - P.scale) * 0.2; 
+
+  floaters.forEach(f => { f.x -= f.spd * dt; if (f.x + f.r < 0) { f.x = W + f.r; f.y = Math.random()*H; } });
+  stars.forEach(s => { s.x -= s.spd * dt; if (s.x < 0) { s.x = W; s.y = Math.random()*H; } });
+  
+  speedLines.forEach(sl => { 
+      sl.x -= sl.spd * dt * (speed/4); 
+      if (sl.x + sl.l < 0) { sl.x = W + Math.random()*100; sl.y = Math.random()*H; }
+  });
+
+  floatingTexts.forEach(ft => { ft.y += ft.vy * dt; ft.life -= 0.02 * dt; });
+  floatingTexts = floatingTexts.filter(ft => ft.life > 0);
+
+  // Particle decay/cleanup must always run, even while dead - otherwise the
+  // flight trail and crash explosion freeze in place forever instead of
+  // fading out, since this used to live below the DEAD early-return.
+  parts.forEach(p => { p.x += p.vx * dt; p.y += p.vy * dt; if (!p.fire) p.vy += 0.1 * dt; p.life -= p.dec * dt; });
+  parts = parts.filter(p => p.life > 0);
+  // cap particles to prevent lag — trim oldest first
+  const maxParts = gfxLevel() === 0 ? 120 : gfxLevel() === 1 ? 220 : 350;
+  if (parts.length > maxParts) parts.splice(0, parts.length - maxParts);
+  
+  if (state !== ST.PLAY && state !== ST.DEAD) {
+    P.y = H/2 + Math.sin(frame*0.05)*30; P.x = W/2;
+    P.trail.unshift({x:P.x, y:P.y, r:P.r}); if (P.trail.length > 25) P.trail.pop();
+    return;
+  }
+  
+  if (state === ST.DEAD) { deadT++; return; }
+
+  // Phantom's pulse ability: every 10 seconds (600 frames), grant 4 seconds
+  // (240 frames) of full invincibility. Reuses the existing P.invinc system,
+  // so it automatically gets the same collision-immunity and flashing visual
+  // as any other invincibility source.
+  if (hasAbil(sInfo, 'pulse')) {
+    P.pulseTimer += dt;
+    if (P.pulseTimer >= 600) {
+      P.pulseTimer = 0;
+      P.invinc = Math.max(P.invinc, 240);
+      burst(P.x, P.y, '#ffffff', 16, 4);
+      sfx('shield');
+    }
+  }
+
+  P.vy += (hasAbil(sInfo, 'float') ? 0.22 : 0.32) * dt; 
+  if (P.vy > 8.5) P.vy = 8.5; 
+  P.y += P.vy * dt;
+  P.ang = Math.max(-25, Math.min(55, P.vy * 4.5));
+
+  P.trail.unshift({x:P.x, y:P.y, r:P.r});
+  const isGodzilla = hasAbil(sInfo, 'laser');
+  if (P.trail.length > (isGodzilla ? 60 : 25)) P.trail.pop();
+
+  if (frame % 3 === 0) {
+    if (hasAbil(sInfo, 'fire')) {
+      trailFire(P.x - P.r, P.y);
+    } else if (isGodzilla) {
+      const gi = glowIntensity();
+      const gfx = gfxLevel();
+      const gCols = ['#ff0000','#cc0000','#ff2200','#ff0055','#aa0000','#ff4400'];
+      // low: 5-9 particles every 4 frames, normal: 8 every 3, high: 10-14 every 3
+      if (gfx === 0 && frame % 4 !== 0) { /* low gfx: skip every other spawn */ }
+      else {
+        const count = gfx === 0 ? (5 + Math.floor(Math.random()*5)) : gfx === 1 ? 8 : 10 + Math.round(gi * 4);
+        for (let g = 0; g < count; g++) {
+          const col = gCols[g % gCols.length];
+          const sizeScale = gfx === 0 ? 0.6 : gfx === 1 ? 0.8 : (0.7 + gi*0.5);
+          parts.push({
+            x: P.x - P.r + (Math.random()-0.5)*16,
+            y: P.y + (Math.random()-0.5)*16,
+            vx: -(Math.random()*4+1.5),
+            vy: (Math.random()-0.5)*3,
+            r: (Math.random()*8+3) * sizeScale,
+            life: 1, dec: 0.016 + Math.random()*0.012,
+            col, fire: true
+          });
+        }
+        if (gfx >= 1 && gi > 0.3) {
+          parts.push({
+            x: P.x - P.r + (Math.random()-0.5)*8,
+            y: P.y + (Math.random()-0.5)*8,
+            vx: -(Math.random()*3+1),
+            vy: (Math.random()-0.5)*2,
+            r: (Math.random()*10+5) * gi,
+            life: 0.6, dec: 0.022,
+            col: `rgba(180,0,255,${(gi*0.6).toFixed(2)})`, fire: true
+          });
+        }
+      }
+    } else {
+      burst(P.x - P.r, P.y, sInfo.col, 1, 1);
+    }
+  }
+
+  // Only the Phantom skin's permanent starting shield (flagged with the 9999
+  // sentinel) is exempt from decay. A shield POWERUP picked up mid-run should
+  // always expire after its normal duration, even for Phantom players -
+  // previously the exemption was keyed off the skin itself, so any shield
+  // powerup a Phantom player collected became permanent too.
+  if (P.shieldT > 0 && P.shieldT < 9999) { P.shieldT -= dt; if (P.shieldT <= 0) P.shield = false; }
+  if (P.slowT  > 0) { P.slowT  -= 1;  if (P.slowT  <= 0) P.slow  = false; }
+  if (P.novaCD > 0) { P.novaCD -= dt; if (P.novaCD < 0) P.novaCD = 0; }
+  if (P.laserCD > 0) { P.laserCD -= dt; if (P.laserCD < 0) P.laserCD = 0; }
+  if (P.laserFlashT > 0) { P.laserFlashT -= dt; if (P.laserFlashT < 0) P.laserFlashT = 0; }
+
+  const pi = Math.max(50, 95 - score*1.2 - level*4);
+  if (frame % Math.round(pi) === 0 && P.startSlowT <= 20) {
+    if (P.pipeSpawnSuppress > 0) {
+      P.pipeSpawnSuppress--;
+    } else {
+      spawnPipe();
+    }
+  }
+
+  pipes.forEach(p => {
+    p.x -= speed * dt;
+    if (!p.passed && p.x + p.w/2 < P.x) {
+      p.passed = true;
+      const isGodz = hasAbil(sInfo, 'laser');
+      addScore(1);
+      sfx('score'); flash(0.2);
+      speed += 0.02;
+      shX=16; shY=16;
+      const scoreShown = isGodz ? '+2' : '+1';
+      addPopText(P.x, P.y - 40, scoreShown, "#fff");
+      const cpUpg = getUpgrades(curSkinIdx).coinpipe || 0;
+      if (cpUpg > 0) {
+        const nextPipe = pipes.filter(np => !np.passed && np.x > P.x).sort((a,b) => a.x - b.x)[0];
+        if (nextPipe) {
+          const cx = nextPipe.x + nextPipe.w / 2;
+          const cy = nextPipe.gy + nextPipe.gap / 2;
+          for (let ci = 0; ci < cpUpg; ci++) {
+            const oy = cpUpg === 1 ? 0 : (ci - (cpUpg-1)/2) * 22;
+            coins.push({ x: cx, y: cy + oy, r: 9, ph: Math.random()*Math.PI*2, done: false, spawnFrame: frame });
+          }
+        }
+      }
+      burst(P.x, P.y, `hsl(${p.hue},100%,60%)`, 20, 5);
+    }
+  });
+  
+  coins.forEach(c => {
+    if (c.done) return;
+    c.x -= speed * dt; c.ph += 0.1;
+    if (!c.done) {
+      const cy = c.y + Math.sin(c.ph)*9;
+      let distToP = dist(P.x, P.y, c.x, cy);
+      if (hasAbil(sInfo, 'magnet') && distToP < 140) {
+        c.x += (P.x - c.x) * 0.15; c.y += (P.y - c.y) * 0.15; 
+      }
+      if (distToP < P.r + c.r + 5) {
+        c.done=true; 
+        let gain = c.value || 1;
+        if (hasAbil(sInfo, 'gold')) gain *= 2;
+        if (hasAbil(sInfo, 'coinx6')) gain *= 6;
+        if (hasAbil(sInfo, 'coinx5')) gain *= 5;
+        const coinUpg = getUpgrades(curSkinIdx).coin || 0;
+        if (coinUpg > 0) gain = Math.round(gain * Math.pow(1.1, coinUpg));
+        save.gems += gain; saveGame(); sfx('coin');
+        shX=6; shY=6;
+        addPopText(c.x, cy - 20, `+${gain}`, "#ffd700");
+        burst(c.x, cy, '#ffd700', 14, 4);
+      }
+    }
+  });
+  
+  pups.forEach(p => {
+    p.x -= speed * dt; p.ph += 0.08;
+    if (!p.done) {
+      const py = p.y + Math.sin(p.ph)*12;
+      if (dist(P.x, P.y, p.x, py) < P.r + p.r + 5) {
+        p.done=true; sfx('pu');
+        const col = p.type==='shield'?'#00ff88':'#dd00ff';
+        burst(p.x, py, col, 25, 6); flash(0.3); shX=14; shY=14;
+        addPopText(p.x, py - 30, p.type.toUpperCase(), col);
+        if (p.type==='shield') { P.shield=true; const shUpg = getUpgrades(curSkinIdx).shield || 0; P.shieldT = 320 + shUpg * 60; }
+        else                   { P.slow=true;   P.slowT=200; }
+      }
+    }
+  });
+  
+  pipes = pipes.filter(p => p.x > -80 && !p.destroyed);
+  coins = coins.filter(c => c.x > -20 && !c.done);
+  pups = pups.filter(p => p.x > -20 && !p.done);
+
+  // coin culler — ON = merge all regular coins into one, runs every 10 frames to avoid jarring jumps
+  if (save.cullerEnabled && frame % 10 === 0) {
+    const regular = coins.filter(c => !c.done && !c.merged);
+    const hasMerged = coins.some(c => !c.done && c.merged);
+    if (!hasMerged && regular.length > 1) {
+      const totalVal = regular.reduce((s, c) => s + (c.value || 1), 0);
+      // use the rightmost coin position (furthest ahead, most natural place to collect)
+      regular.sort((a, b) => b.x - a.x);
+      const anchor = regular[0];
+      regular.forEach(c => { c.done = true; });
+      coins.push({ x: anchor.x, y: anchor.y, r: 13, ph: anchor.ph || 0, done: false, value: totalVal, merged: true });
+    }
+  }
+
+  if (!P.alive || P.invinc > 0) return;
+
+  for (let i = 0; i < pipes.length; i++) {
+    let p = pipes[i];
+    if (P.x+P.r-3 > p.x && P.x-P.r+3 < p.x+p.w) {
+      if (P.y - P.r < p.gy || P.y + P.r > p.gy + p.gap) {
+        p.hit = true; handleHit(false, p); break;
+      }
+    }
+  }
+
+  // Re-check here: if the pipe loop above already triggered a hit this
+  // frame (consuming a shield/life and setting invincibility, or killing
+  // the bird), skip the boundary checks below. Otherwise a bird that's
+  // simultaneously touching a pipe AND the floor/ceiling in the same frame
+  // could lose a shield to the pipe hit, then immediately take a second,
+  // unprotected hit from the boundary check before invincibility applies.
+  if (!P.alive || P.invinc > 0) return;
+
+  if (P.y + P.r > H) { P.y = H - P.r; handleHit(true); }
+  if (P.y - P.r < 0) { P.y = P.r; P.vy = 2; handleHit(true); }
+}
+
+function handleHit(isBoundary=false, hitPipe=null) {
+  const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  let impactCol = '#00ff88';
+  let dmgCol = '#ff0000';
+
+  if (P.shield) {
+     P.shield=false; P.shieldT=0; 
+     shX=40; shY=40; 
+     burst(P.x,P.y,impactCol,45,8);
+     sfx('shield'); flash(0.5); P.invinc = 60; 
+     addPopText(P.x, P.y - 30, "DEFLECTED!", impactCol);
+     if (hitPipe) {
+         burst(hitPipe.x + hitPipe.w/2, hitPipe.gy, impactCol, 30, 7);
+         burst(hitPipe.x + hitPipe.w/2, hitPipe.gy + hitPipe.gap, impactCol, 30, 7);
+         hitPipe.destroyed = true; 
+     }
+     if (isBoundary) P.vy = P.y > H/2 ? -6 : 6;
+  } else if (P.lives > 0) {
+     P.lives--; sfx('boom'); flash(0.6); P.invinc = 60; 
+     shX=45; shY=45; burst(P.x, P.y, dmgCol, 45, 10);
+     pipes.forEach(p => { burst(p.x + p.w/2, p.gy, '#ffaa00', 20, 7); p.destroyed = true; }); 
+  } else {
+     die();
+  }
+}
+
+function trailFire(x, y) {
+  const lvl = gfxLevel();
+  if (lvl === 0) return; 
+  parts.push({ x, y, vx:(Math.random()-0.5)*2 - 2, vy:(Math.random()-0.5)*2, r:Math.random()*6+2, life:1, dec:0.04, col: Math.random()>0.5?'#ff4400':'#ffaa00', fire:true });
+  if (lvl === 2) {
+    parts.push({ x, y, vx:(Math.random()-0.5)*2 - 2, vy:(Math.random()-0.5)*2, r:Math.random()*6+2, life:1, dec:0.04, col: Math.random()>0.5?'#ff4400':'#ffaa00', fire:true });
+  }
+}
+
+let freeplayTimeSec = 0, freeplayIsNewHigh = false;
+function die() {
+  const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  P.alive=false; flash(0.8); P.trail = [];
+  
+  burst(P.x, P.y, sInfo.col, 70, 14); 
+  burst(P.x, P.y, '#ffffff', 40, 9);
+  
+  sfx('crash'); 
+  shX=65; shY=65; 
+  deadT=0;
+
+  const diff = save.difficulty || 'normal';
+  if (level === 0 && (diff === 'normal' || diff === 'hard')) {
+    // Freeplay results screen - high scores only tracked for normal/hard.
+    freeplayTimeSec = Math.floor(frame / 60);
+    freeplayIsNewHigh = false;
+    save.lastFreeplayScore[diff] = score;
+    if (score > (save.highScores[diff] || 0)) {
+      save.highScores[diff] = score;
+      save.gems += 25;
+      freeplayIsNewHigh = true;
+    }
+    saveGame();
+    setGameState(ST.FPSCORE);
+  } else {
+    setGameState(ST.DEAD);
+  }
+}
+
+function dist(ax,ay,bx,by) { const dx=ax-bx,dy=ay-by; return Math.sqrt(dx*dx+dy*dy); }
+
+function tap(x, y) {
+  initAudioContext(); 
+  if (state === ST.SPLASH) { state = ST.MENU; splashFrame = 999; return; }
+  if (Date.now() - lastStateChange < 250) return; 
+
+  if (state===ST.MENU) {
+    if (y > H*0.30 && y < H*0.46) { sfx('ui'); pendingDifficulty = save.difficulty || 'normal'; setGameState(ST.DIFF); }
+    if (y > H*0.47 && y < H*0.62) { sfx('ui'); setGameState(ST.STORE); const svIdx = SKINS.findIndex(s => s.id === curSkinIdx); storeViewIdx = svIdx >= 0 ? svIdx : 0; shopMsg = ""; }
+    if (y > H*0.63 && y < H*0.78) { sfx('ui'); upgradePickIdx = 0; shopMsg = ""; setGameState(ST.UPGRADEPICK); }
+    return;
+  }
+
+  if (state===ST.DIFF) {
+    if (y > H*0.88 && x < W*0.4) { sfx('ui'); setGameState(ST.MENU); return; }
+
+    for (let i = 0; i < DIFFS.length; i++) {
+      const r = diffButtonRect(i);
+      if (x > r.left && x < r.right && y > r.top && y < r.bottom) {
+        sfx('ui'); pendingDifficulty = DIFFS[i].id; return;
+      }
+    }
+
+    const cb = diffConfirmBtn();
+    const dx = x - cb.x, dy = y - cb.y;
+    if (dx*dx + dy*dy < (cb.r*1.5)*(cb.r*1.5)) {
+      sfx('ui');
+      save.difficulty = pendingDifficulty; saveGame();
+      setGameState(ST.LEVELS); targetScrollY = 0;
+      return;
+    }
+    return;
+  }
+
+  if (state===ST.LEVELS) {
+    if (y > H*0.85) { sfx('ui'); setGameState(ST.MENU); targetScrollY = 0; return; }
+    
+    let clickedLvl = -1;
+    const paddingY = H / 15; 
+    for (let i = 1; i <= 16; i++) {
+      let targetRowY = H * 0.1 + i * (H / 7) + levelScrollY;
+      if (y >= targetRowY - paddingY && y <= targetRowY + paddingY) { clickedLvl = i; break; }
+    }
+    
+    if (clickedLvl !== -1) {
+      const curMax = save.maxLevelByDiff[save.difficulty || 'normal'];
+      let isValidNormal = (clickedLvl >= 1 && clickedLvl <= 15 && clickedLvl <= curMax);
+      let isValidFree = (clickedLvl === 16 && curMax > 15 && save.difficulty !== 'easy');
+      
+      if (isValidNormal || isValidFree) {
+        let targetLvl = clickedLvl === 16 ? 0 : clickedLvl;
+        sfx('ui');
+        const diff = save.difficulty || 'normal';
+        if (targetLvl === 0 && (diff === 'normal' || diff === 'hard')) {
+          setGameState(ST.FPMENU);
+        } else {
+          resetPlay(targetLvl);
+        }
+      } else { sfx('crash'); }
+    }
+    return;
+  }
+
+  if (state===ST.FPMENU) {
+    if (y > H*0.55 && y < H*0.68) { sfx('ui'); resetPlay(0); return; }
+    if (y > H*0.88 && x < W*0.4) { sfx('ui'); setGameState(ST.LEVELS); return; }
+    return;
+  }
+
+  if (state===ST.STORE) {
+    if (x > W - 160 && y > 10 && y < 65) {
+      save.musicEnabled = !save.musicEnabled;
+      saveGame();
+      sfx('ui');
+      return;
+    }
+
+    if (x < 150 && y > 10 && y < 40) {
+      const qualities = ['low', 'normal', 'high'];
+      const curIdx = qualities.indexOf(save.graphicsQuality || 'normal');
+      save.graphicsQuality = qualities[(curIdx + 1) % qualities.length];
+      applyGraphicsQuality();
+      saveGame();
+      sfx('ui');
+      return;
+    }
+
+    if (y > H*0.85) { sfx('ui'); setGameState(ST.MENU); return; }
+    if (x > W*0.76 && x < W*0.99 && y > H*0.52 && y < H*0.79) {
+      sfx('ui'); hybridSlotA = -1; hybridSlotB = -1; shopMsg = ""; setGameState(ST.HYBRID); return;
+    }
+    if (x < W * 0.33 && y > H * 0.35 && y < H * 0.55) { 
+      sfx('ui'); storeViewIdx = (storeViewIdx - 1 + SKINS.length) % SKINS.length; shopMsg = ""; return; 
+    }
+    if (x > W * 0.67 && y > H * 0.35 && y < H * 0.55) { 
+      sfx('ui'); storeViewIdx = (storeViewIdx + 1) % SKINS.length; shopMsg = ""; return; 
+    }
+    if (x > W * 0.25 && x < W * 0.75 && y > H * 0.58 && y < H * 0.72) {
+      let s = SKINS[storeViewIdx];
+      if (save.unlocked.includes(s.id)) { 
+          sfx('ui'); curSkinIdx = s.id; save.curSkinIdx = curSkinIdx; saveGame(); shopMsg = "EQUIPPED!"; shopMsgIsError = false;
+      } 
+      else if (save.gems >= s.cost) { 
+          save.gems -= s.cost; save.unlocked.push(s.id); curSkinIdx = s.id; save.curSkinIdx = curSkinIdx; saveGame(); sfx('coin'); shopMsg = "PURCHASED!"; shopMsgIsError = false;
+      }
+      else {
+          sfx('boom'); shopMsg = "NOT ENOUGH COINS"; shopMsgIsError = true;
+      }
+    }
+    return;
+  }
+
+  if (state===ST.UPGRADEPICK) {
+    if (y > H*0.84) { sfx('ui'); setGameState(ST.MENU); return; }
+    const ownedSkins = getAllSkins().filter(s => save.unlocked.includes(s.id));
+    if (!ownedSkins.length) return;
+    if (x < W*0.25 && y > H*0.33 && y < H*0.55) { sfx('ui'); upgradePickIdx = (upgradePickIdx - 1 + ownedSkins.length) % ownedSkins.length; return; }
+    if (x > W*0.75 && y > H*0.33 && y < H*0.55) { sfx('ui'); upgradePickIdx = (upgradePickIdx + 1) % ownedSkins.length; return; }
+    if (x > W*0.25 && x < W*0.75 && y > H*0.62 && y < H*0.76) {
+      sfx('ui'); upgradeSelectedId = ownedSkins[upgradePickIdx].id; shopMsg = ""; setGameState(ST.UPGRADES); return;
+    }
+    return;
+  }
+
+  if (state===ST.UPGRADES) {
+    if (y > H*0.88) { sfx('ui'); setGameState(ST.UPGRADEPICK); return; }
+    const upTypes = ['shield','coin','coinpipe'];
+    for (let i = 0; i < upTypes.length; i++) {
+      const rowY = H*(0.31 + i*0.19);
+      if (y > rowY - H*0.07 && y < rowY + H*0.07 && x > W*0.5 && x < W*0.99) {
+        const t = upTypes[i];
+        const cost = upgradeCost(t, upgradeSelectedId);
+        if (save.gems >= cost) {
+          save.gems -= cost; getUpgrades(upgradeSelectedId)[t]++;
+          saveGame(); sfx('coin');
+          shopMsg = t.toUpperCase() + " UPGRADED!"; shopMsgIsError = false;
+        } else {
+          sfx('boom'); shopMsg = "NOT ENOUGH COINS"; shopMsgIsError = true;
+        }
+        return;
+      }
+    }
+    return;
+  }
+
+  if (state===ST.RESETCONFIRM) {
+    // "are you sure?" - I'M SURE or BACK
+    if (y > H*0.5 && y < H*0.65) { sfx('ui'); setGameState(ST.RESETCONFIRM2); return; }
+    if (y > H*0.7 && y < H*0.85) { sfx('ui'); setGameState(ST.PLAY); setPaused(true); return; }
+    return;
+  }
+
+  if (state===ST.RESETCONFIRM2) {
+    // "are you sure sure sure?" - YES DELETE or GO BACK
+    if (y > H*0.5 && y < H*0.65) {
+      localStorage.removeItem('neonSave'); location.reload(); return;
+    }
+    if (y > H*0.7 && y < H*0.85) { sfx('ui'); setGameState(ST.PLAY); setPaused(true); return; }
+    return;
+  }
+
+  if (state===ST.HYBRID) {
+    if (y < H*0.15 && x < W*0.25) { sfx('ui'); setGameState(ST.STORE); return; }
+
+    if (y > H*0.175 && y < H*0.23) {
+      sfx('ui'); hybridViewIdx = 0; setGameState(ST.HYBRIDLIST); return;
+    }
+
+    const ra = hybridSlotRect('a');
+    if (x > ra.left && x < ra.right && y > ra.top && y < ra.bottom) {
+      sfx('ui'); hybridSlotA = cycleHybridSlot(hybridSlotA, hybridSlotB); return;
+    }
+    const rb = hybridSlotRect('b');
+    if (x > rb.left && x < rb.right && y > rb.top && y < rb.bottom) {
+      sfx('ui'); hybridSlotB = cycleHybridSlot(hybridSlotB, hybridSlotA); return;
+    }
+
+    const cb = hybridConfirmBtn();
+    if (x > cb.left - 10 && x < cb.right + 10 && y > cb.top - 10 && y < cb.bottom + 10) {
+      const skinAChk = SKINS.find(s => s.id === hybridSlotA);
+      const skinBChk = SKINS.find(s => s.id === hybridSlotB);
+      if ((skinAChk && skinAChk.noFuse) || (skinBChk && skinBChk.noFuse)) {
+        sfx('crash'); shopMsg = "GODZILLA CANNOT BE FUSED"; shopMsgIsError = true;
+      } else if (hybridSlotA === -1 || hybridSlotB === -1) {
+        sfx('crash'); shopMsg = "PICK 2 SKINS FIRST"; shopMsgIsError = true;
+      } else if (hybridSlotA === hybridSlotB) {
+        sfx('crash'); shopMsg = "PICK 2 DIFFERENT SKINS"; shopMsgIsError = true;
+      } else if (save.gems < HYBRID_COST) {
+        sfx('crash'); shopMsg = "NOT ENOUGH COINS"; shopMsgIsError = true;
+      } else {
+        sfx('ui'); performHybrid();
+      }
+      return;
+    }
+    return;
+  }
+
+  if (state===ST.HYBRIDLIST) {
+    if (y > H*0.88 && x < W*0.4) { sfx('ui'); setGameState(ST.HYBRID); return; }
+
+    const list = save.hybrids || [];
+    if (list.length > 0) {
+      if (x < W * 0.33 && y > H * 0.35 && y < H * 0.55) {
+        sfx('ui'); hybridViewIdx = (hybridViewIdx - 1 + list.length) % list.length; return;
+      }
+      if (x > W * 0.67 && y > H * 0.35 && y < H * 0.55) {
+        sfx('ui'); hybridViewIdx = (hybridViewIdx + 1) % list.length; return;
+      }
+      if (x > W * 0.25 && x < W * 0.75 && y > H * 0.58 && y < H * 0.72) {
+        const h = list[hybridViewIdx];
+        if (h && hybridIsReady(h)) {
+          sfx('ui'); curSkinIdx = h.id; save.curSkinIdx = curSkinIdx; saveGame();
+        } else {
+          sfx('crash');
+        }
+      }
+    }
+    return;
+  }
+
+  if ((state===ST.DEAD || state===ST.WIN) && deadT>30) {
+    if (y > H*0.55 && y < H*0.68) { 
+      sfx('ui'); 
+      if (state === ST.WIN) {
+        // "NEXT LEVEL" - advance to the next numbered level, capped at the
+        // last one (15). WIN can only happen on levels 1-15 since Freeplay
+        // (level 0) has an infinite goal and can never be "won".
+        resetPlay(level < 15 ? level + 1 : level);
+      } else {
+        resetPlay(level); // "RESTART" on the DEAD screen replays the same level
+      }
+    } 
+    else if (y > H*0.68 && y < H*0.85) { sfx('ui'); setGameState(ST.MENU); }
+    return;
+  }
+
+  if (state===ST.FPSCORE && deadT>30) {
+    if (y > H*0.66 && y < H*0.76) { sfx('ui'); resetPlay(0); }
+    else if (y > H*0.78 && y < H*0.88) { sfx('ui'); setGameState(ST.MENU); }
+    return;
+  }
+  
+  if (state===ST.PLAY) {
+    const pb = pauseBtnRect();
+    const pdx = x - pb.x, pdy = y - pb.y;
+    if (!isPaused && pdx*pdx + pdy*pdy < (pb.r*1.6)*(pb.r*1.6)) {
+      sfx('ui'); setPaused(true); return;
+    }
+    if (isPaused) {
+      // Pause menu controls - same positions/behavior as the graphics and
+      // music toggles in the shop, just relocated to the pause screen.
+      if (x < 150 && y > H-70 && y < H-40) {
+        const qualities = ['low', 'normal', 'high'];
+        const curIdx = qualities.indexOf(save.graphicsQuality || 'normal');
+        save.graphicsQuality = qualities[(curIdx + 1) % qualities.length];
+        applyGraphicsQuality(); saveGame(); sfx('ui');
+        return;
+      }
+      if (x < 150 && y > H-40 && y < H-10) {
+        save.musicEnabled = !save.musicEnabled; saveGame(); sfx('ui');
+        return;
+      }
+      // The pause icon itself no longer resumes - this is the only way.
+      if (y > H*0.24 && y < H*0.36) { sfx('ui'); setPaused(false); return; }
+      if (y > H*0.36 && y < H*0.48) { sfx('ui'); setPaused(false); resetPlay(level); return; }
+      if (y > H*0.48 && y < H*0.60) { sfx('ui'); setPaused(false); setGameState(ST.MENU); return; }
+      if (y > H*0.60 && y < H*0.72) { save.cullerEnabled = !save.cullerEnabled; saveGame(); sfx('ui'); return; }
+      if (x > W*0.6 && y > H*0.91) { sfx('ui'); setPaused(false); setGameState(ST.RESETCONFIRM); return; }
+      return; // ignore flap/ability/icon taps while paused
+    }
+  }
+
+  if (state===ST.PLAY && P.alive && P.startSlowT <= 100) { 
+    const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+    if (hasAbil(sInfo, 'nova')) {
+      const nb = voidRayBtnRect();
+      const ndx = x - nb.x, ndy = y - nb.y;
+      if (ndx*ndx + ndy*ndy < nb.r*nb.r) {
+        if (P.novaCD <= 0) {
+          P.novaCD = NOVA_COOLDOWN;
+          addScore(2, true);
+          addPopText(P.x, P.y - 50, "NOVA +2", "#4400ff");
+          sfx('win'); flash(0.7, '255,40,40'); shX = 20; shY = 20; P.invinc = Math.max(P.invinc, 30);
+          pipes.forEach(p => { if (!p.destroyed) { burst(p.x + p.w/2, p.gy + p.gap/2, `hsl(${p.hue},100%,60%)`, 22, 7); p.destroyed = true; } });
+          coins.forEach(c => {
+            if (!c.done) {
+              let gain = 1;
+              if (hasAbil(sInfo, 'gold')) gain *= 2;
+              if (hasAbil(sInfo, 'coinx6')) gain *= 6;
+              if (hasAbil(sInfo, 'coinx5')) gain *= 5;
+              save.gems += gain; c.done = true;
+              burst(c.x, c.y, '#ffd700', 8, 4);
+            }
+          });
+          saveGame();
+        }
+        return; // this tap activated the ability, don't also flap
+      }
+    }
+
+    if (hasAbil(sInfo, 'laser')) {
+      const lb = laserBtnRect();
+      const ldx = x - lb.x, ldy = y - lb.y;
+      if (ldx*ldx + ldy*ldy < lb.r*lb.r) {
+        if (P.laserCD <= 0) {
+          P.laserCD = LASER_COOLDOWN;
+          P.laserFlashT = 22;
+          const destroyCount = 4 + Math.floor(Math.random() * 3); // 4-6 inclusive
+          let destroyed = 0;
+          // Sort by proximity so it clears the pillars directly ahead first.
+          const ahead = pipes.filter(p => !p.destroyed && p.x + p.w > P.x).sort((p1, p2) => p1.x - p2.x);
+          ahead.forEach(p => {
+            if (destroyed < destroyCount) {
+              burst(p.x + p.w/2, p.gy + p.gap/2, '#aa00ff', 35, 10);
+              burst(p.x + p.w/2, p.gy + p.gap/2, '#ff0000', 24, 8);
+              burst(p.x + p.w/2, p.gy + p.gap/2, '#ffffff', 16, 6);
+              p.destroyed = true;
+              destroyed++;
+            }
+          });
+          // If fewer pillars existed on screen than the roll, suppress the
+          // next several spawns too - the beam cleared the path ahead even
+          // before those pillars appeared.
+          P.pipeSpawnSuppress = (P.pipeSpawnSuppress || 0) + Math.max(0, destroyCount - destroyed);
+
+          addScore(3 + Math.floor(Math.random() * 4), true); // raw 3-6, bypasses all multipliers
+          addPopText(P.x, P.y - 55, `LASER! +3 -${destroyCount}`, '#aa00ff');
+          sfx('laserboom');
+          flash(0.95, '170,0,255');
+          shX = 38; shY = 38;
+          P.invinc = Math.max(P.invinc, 20);
+          saveGame();
+        }
+        return; // this tap activated the ability, don't also flap
+      }
+    }
+    P.vy = -6.2; P.scale = 1.3; 
+    sfx('flap'); 
+    burst(P.x-P.r, P.y, '#fff', 6, 2);
+    shX=3; shY=3; 
+  }
+}
+
+document.addEventListener('keydown', e => { if (e.code==='Space'||e.code==='ArrowUp') { e.preventDefault(); tap(W/2, H/2); }});
+
+canvas.addEventListener('pointerdown', e => { 
+    e.preventDefault(); 
+    const rect = canvas.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+    touchY = e.clientY; 
+    isDragging = true; 
+    dragMoved = false;
+    pendingTapX = clickX; pendingTapY = clickY;
+
+    if (state === ST.LEVELS) {
+      const track = levelScrollbarTrack();
+      if (clickX > track.x - 16 && clickY > track.top - 12 && clickY < track.bottom + 12) {
+        // Touch started on the scrollbar itself - jump straight to that
+        // position and let pointermove fine-tune it, like a real slider.
+        isDraggingScrollbar = true;
+        targetScrollY = scrollFromTrackY(clickY);
+        return;
+      }
+      // Otherwise this might be the start of a list drag-scroll - don't
+      // resolve it as a level tap yet, wait for pointerup (see below).
+    } else {
+      tap(clickX, clickY);
+    }
+});
+
+canvas.addEventListener('pointermove', e => { 
+    e.preventDefault(); 
+    if (isDraggingScrollbar) {
+      const rect = canvas.getBoundingClientRect();
+      targetScrollY = scrollFromTrackY(e.clientY - rect.top);
+      return;
+    }
+    if(isDragging && state === ST.LEVELS) {
+        let dy = e.clientY - touchY;
+        if (Math.abs(dy) > 3) dragMoved = true;
+        targetScrollY += dy;
+        touchY = e.clientY;
+        let maxScroll = -levelMaxScrollAbs();
+        if (targetScrollY > 0) targetScrollY = 0;
+        if (targetScrollY < maxScroll) targetScrollY = maxScroll;
+    }
+});
+
+canvas.addEventListener('pointerup', e => { 
+    e.preventDefault(); 
+    if (isDraggingScrollbar) {
+      isDraggingScrollbar = false; isDragging = false; return;
+    }
+    if (state === ST.LEVELS && !dragMoved) {
+      tap(pendingTapX, pendingTapY);
+    }
+    isDragging = false; 
+});
+
+function glowIntensity() { return save.glowIntensity !== undefined ? save.glowIntensity : 1; }
+function hexToRgb(hex) {
+  const v = parseInt(hex.slice(1), 16);
+  return `${(v>>16)&255},${(v>>8)&255},${v&255}`;
+}
+// A proper soft-falloff glow (bright center fading smoothly to fully
+// transparent) instead of a flat translucent circle - looks like an actual
+// bloom/glow rather than a hard-edged halo ring.
+function glowHalo(x, y, baseR, color, gi, alphaMult) {
+  if (gi <= 0) return;
+  const rgb = hexToRgb(color);
+  const haloR = baseR + (10 + 7 * gi) * gi;
+  const peakAlpha = Math.min(1, (alphaMult || 0.85) * gi);
+  const grad = ctx.createRadialGradient(x, y, 0, x, y, haloR);
+  grad.addColorStop(0, `rgba(${rgb},${peakAlpha.toFixed(2)})`);
+  grad.addColorStop(0.45, `rgba(${rgb},${(peakAlpha*0.45).toFixed(2)})`);
+  grad.addColorStop(1, `rgba(${rgb},0)`);
+  ctx.fillStyle = grad;
+  ctx.beginPath(); ctx.arc(x, y, haloR, 0, Math.PI*2); ctx.fill();
+}
+
+function drawOptimizedGlow(x, y, w, h, fill, glow) {
+  const gi = glowIntensity();
+  if (gfxLevel() > 0 && gi > 0) {
+    // Single tight, static halo - no pulsing, no wide blur/haze. Scales
+    // with the player-adjustable glow intensity slider.
+    const haloSize = 4 * gi;
+    ctx.fillStyle = glow;
+    ctx.globalAlpha = Math.min(1, 0.3 * gi);
+    ctx.fillRect(x - haloSize, y - haloSize, w + haloSize*2, h + haloSize*2);
+    if (gi > 1.4) {
+      // Extra soft outer layer only appears once the slider's pushed past
+      // the default, so high settings feel noticeably more dramatic.
+      const outerSize = haloSize * 1.8;
+      ctx.globalAlpha = Math.min(0.45, 0.16 * (gi - 1));
+      ctx.fillRect(x - outerSize, y - outerSize, w + outerSize*2, h + outerSize*2);
+    }
+    ctx.globalAlpha = 1.0;
+  }
+  ctx.fillStyle = fill; ctx.fillRect(x, y, w, h);
+  if (gfxLevel() > 0 && gi > 0) {
+    // Solid bright colored outline for the neon-sign look.
+    ctx.strokeStyle = glow; ctx.lineWidth = 2.5 * Math.min(2.4, gi);
+    ctx.globalAlpha = Math.min(1, gi);
+    ctx.strokeRect(x, y, w, h);
+    // Thin bright inner highlight - gives a glassy "neon tube" edge.
+    ctx.strokeStyle = `rgba(255,255,255,${(0.55 * Math.min(1, gi)).toFixed(2)})`; ctx.lineWidth = 1;
+    ctx.strokeRect(x + 1.5, y + 1.5, w - 3, h - 3);
+    ctx.globalAlpha = 1.0;
+  }
+}
+
+function draw() {
+  if (state === ST.SPLASH) {
+    ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
+    let alpha;
+    if (splashFrame < 60) alpha = splashFrame / 60;
+    else if (splashFrame < 240) alpha = 1;
+    else alpha = Math.max(0, 1 - (splashFrame - 240) / 60);
+
+    ctx.textAlign = 'center';
+    ctx.globalAlpha = alpha;
+    ctx.font = `bold ${Math.min(38, W*0.085)}px 'Overbit', monospace`;
+    ctx.fillStyle = '#00e5ff';
+    ctx.fillText('S STUDIOS', W/2, H/2);
+    ctx.font = `${Math.min(12, W*0.03)}px 'Overbit', monospace`;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText('tap to skip', W/2, H/2 + 40);
+    ctx.globalAlpha = 1;
+    return;
+  }
+
+  const sx = isPaused ? 0 : shX*(Math.random()*2-1)|0;
+  const sy = isPaused ? 0 : shY*(Math.random()*2-1)|0;
+  ctx.save(); ctx.translate(sx, sy);
+  const lvl = gfxLevel();
+
+  const bg = ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0, `hsl(${220 + Math.sin(frame*0.005)*40}, 80%, 12%)`); 
+  bg.addColorStop(1, '#000000');
+
+  if (lvl === 2) {
+    ctx.globalAlpha = 0.8;
+    ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
+    ctx.globalAlpha = 1.0;
+  } else {
+    ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
+  }
+
+  if (lvl > 0) {
+    floaters.forEach(f => {
+      const grad = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.r);
+      const alpha = lvl === 2 ? f.a * 1.4 : f.a;
+      grad.addColorStop(0, `hsla(${f.hue}, 100%, 60%, ${alpha})`);
+      grad.addColorStop(1, `hsla(${f.hue}, 100%, 60%, 0)`);
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI*2); ctx.fill();
+    });
+  }
+
+  if (lvl === 2) {
+    for (let i = 0; i < 14; i++) {
+      const sx2 = (i * 137 + frame * 1.3) % W;
+      const sy2 = (i * 251 + Math.sin(frame*0.03 + i) * 40) % H;
+      const tw = (Math.sin(frame * 0.15 + i * 2) + 1) / 2;
+      ctx.globalAlpha = tw * 0.6;
+      ctx.fillStyle = i % 2 === 0 ? '#00ffff' : '#ff66ff';
+      ctx.beginPath(); ctx.arc(sx2, sy2, 1.5 + tw*1.5, 0, Math.PI*2); ctx.fill();
+    }
+    ctx.globalAlpha = 1.0;
+  }
+
+  ctx.beginPath();
+  mountains.forEach((m, i) => { i===0 ? ctx.moveTo(m.x, m.y) : ctx.lineTo(m.x, m.y); });
+  ctx.lineTo(W+100, H); ctx.lineTo(-100, H); ctx.closePath();
+  ctx.fillStyle = 'rgba(0, 100, 200, 0.05)'; ctx.fill();
+  ctx.strokeStyle = 'rgba(0, 200, 255, 0.2)'; ctx.lineWidth = 2; ctx.stroke();
+
+  ctx.lineWidth = 1;
+  speedLines.forEach(sl => {
+    ctx.strokeStyle = `rgba(0, 255, 255, ${sl.a})`;
+    ctx.beginPath(); ctx.moveTo(sl.x, sl.y); ctx.lineTo(sl.x + sl.l, sl.y); ctx.stroke();
+  });
+
+  ctx.strokeStyle='rgba(0,255,255,0.06)'; ctx.lineWidth=1;
+  for (let x=(gridX%60+60)%60; x<W; x+=60) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+  
+  stars.forEach(s => { ctx.fillStyle=`rgba(255,255,255,${0.3+0.5*Math.sin(frame*0.05+s.b)})`; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill(); });
+
+  if (state === ST.PLAY) {
+    pipes.forEach(p => {
+      const c = p.hit ? '#ff0000' : `hsl(${p.hue},100%,30%)`;
+      const gc = p.hit ? '#ffaaaa' : `hsl(${p.hue},100%,60%)`;
+      drawOptimizedGlow(p.x, 0, p.w, p.gy, c, gc);
+      drawOptimizedGlow(p.x, p.gy+p.gap, p.w, H-(p.gy+p.gap), c, gc);
+    });
+
+    coins.forEach(c => {
+      const cy = c.y + Math.sin(c.ph)*9;
+      if (gfxLevel() > 0) glowHalo(c.x, cy, c.r, '#ffd700', glowIntensity());
+      ctx.fillStyle = '#ffd700'; ctx.beginPath(); ctx.arc(c.x, cy, c.r, 0, Math.PI*2); ctx.fill();
+      if (c.merged && c.value > 1) {
+        const fontSize = Math.max(13, c.r * 1.1);
+        ctx.save();
+        ctx.font = `bold ${fontSize}px 'Overbit', monospace`;
+        ctx.textAlign = 'center';
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 3;
+        ctx.strokeText(c.value, c.x, cy + fontSize * 0.35);
+        ctx.fillStyle = '#000';
+        ctx.fillText(c.value, c.x, cy + fontSize * 0.35);
+        ctx.restore();
+      } else {
+        ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(c.x-3, cy-3, 2, 0, Math.PI*2); ctx.fill();
+      }
+    });
+
+    pups.forEach(p => {
+      const py=p.y+Math.sin(p.ph)*12; const col = p.type==='shield'?'#00ff88':'#dd00ff';
+      if (gfxLevel() > 0) glowHalo(p.x, py, p.r, col, glowIntensity());
+      ctx.fillStyle = col; ctx.beginPath(); ctx.arc(p.x,py,p.r,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle='#fff'; ctx.font=`bold ${12.0*0.7}px 'Overbit', monospace`; ctx.textAlign='center';
+      ctx.fillText(p.type==='shield'?'S':'T', p.x, py+4);
+    });
+  }
+
+  parts.forEach(p => { ctx.globalAlpha=p.life; ctx.fillStyle=p.col; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); });
+  ctx.globalAlpha = 1.0;
+
+  const sInfo = getAllSkins().find(s => s.id === curSkinIdx) || SKINS[0];
+  if (P.alive || state !== ST.DEAD) {
+    ctx.save(); ctx.translate(P.x, P.y); ctx.rotate(P.ang*Math.PI/180); 
+    let sx = P.scale + Math.abs(P.vy)*0.015; let sy = P.scale - Math.abs(P.vy)*0.015;
+    ctx.scale(sx, Math.max(0.5, sy));
+    
+    if (gfxLevel() === 2) {
+      ctx.save();
+      ctx.rotate(frame * 0.04);
+      ctx.strokeStyle = `hsl(${(frame*4) % 360}, 100%, 65%)`;
+      ctx.lineWidth = 2;
+      ctx.globalAlpha = 0.5;
+      ctx.beginPath(); ctx.arc(0, 0, P.r + 7, 0, Math.PI*1.4); ctx.stroke();
+      ctx.globalAlpha = 1.0;
+      ctx.restore();
+    }
+
+    if (P.shield) {
+      ctx.strokeStyle='#00ff88'; ctx.lineWidth=2 + Math.sin(frame*0.2)*1; ctx.fillStyle='rgba(0,255,136,0.2)';
+      ctx.beginPath(); ctx.arc(0,0,P.r+9,0,Math.PI*2); ctx.fill(); ctx.stroke();
+    }
+    if (P.invinc > 0 && Math.floor(frame/3)%2 === 0) { 
+        ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0,0,P.r+4,0,Math.PI*2); ctx.fill();
+    } else {
+        if (gfxLevel() > 0) {
+          glowHalo(0, 0, P.r, sInfo.glowCol || sInfo.col, glowIntensity());
+        }
+        ctx.fillStyle = sInfo.col;
+        ctx.beginPath(); ctx.moveTo(P.r, 0); ctx.lineTo(-P.r*0.6, -P.r*0.8); ctx.lineTo(-P.r*0.3, 0); ctx.lineTo(-P.r*0.6, P.r*0.8); ctx.closePath(); ctx.fill();
+        ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(0,0,P.r*0.3,0,Math.PI*2); ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  ctx.textAlign='center';
+  floatingTexts.forEach(ft => {
+    ctx.globalAlpha = ft.life; ctx.fillStyle = ft.col; ctx.font = `bold ${22.0*0.7}px 'Overbit', monospace`;
+    ctx.fillText(ft.txt, ft.x, ft.y);
+  });
+  ctx.globalAlpha = 1.0;
+
+  if (state === ST.PLAY) {
+    ctx.font=`bold ${18.0*0.7}px 'Overbit', monospace`;
+    ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(0,0,0,0.55)'; ctx.lineJoin = 'round';
+    ctx.strokeText(score, W/2, 30);
+    ctx.fillStyle='#fff'; ctx.fillText(score, W/2, 30);
+    ctx.font=`${13.0*0.7}px 'Overbit', monospace`; ctx.fillText(`COINS: ${save.gems}`, W/2, 52);
+    if (level > 0) ctx.fillText(`GOAL: ${targetScore}`, W/2, 71);
+    
+    if (P.startSlowT > 0 && !isPaused) {
+       ctx.font=`bold ${Math.min(20, W*0.04)}px 'Overbit', monospace`; ctx.fillStyle = `rgba(0, 255, 255, ${Math.min(1, P.startSlowT/30)})`;
+       ctx.fillText("GET READY", W/2, H/2);
+       let secs = Math.ceil(P.startSlowT / 60);
+       ctx.font=`bold ${Math.min(16, W*0.032)}px 'Overbit', monospace`; ctx.fillText(secs, W/2, H/2 + 28);
+    }
+
+    if (hasAbil(sInfo, 'nova')) {
+      const nb = voidRayBtnRect();
+      const ready = P.novaCD <= 0;
+      ctx.save();
+      ctx.globalAlpha = ready ? 0.25 : 0.12;
+      ctx.fillStyle = '#4400ff';
+      ctx.beginPath(); ctx.arc(nb.x, nb.y, nb.r, 0, Math.PI*2); ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = ready ? '#aa66ff' : '#553388'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(nb.x, nb.y, nb.r, 0, Math.PI*2); ctx.stroke();
+      if (!ready) {
+        // Cooldown sweep - fills back in clockwise as the ability recharges
+        const frac = 1 - (P.novaCD / NOVA_COOLDOWN);
+        ctx.fillStyle = 'rgba(170,102,255,0.4)';
+        ctx.beginPath(); ctx.moveTo(nb.x, nb.y);
+        ctx.arc(nb.x, nb.y, nb.r, -Math.PI/2, -Math.PI/2 + frac*Math.PI*2);
+        ctx.closePath(); ctx.fill();
+      }
+      ctx.fillStyle = ready ? '#fff' : '#888';
+      ctx.font = `bold ${14.0*0.7}px 'Overbit', monospace`;
+      ctx.fillText('✦', nb.x, nb.y + 5);
+      ctx.restore();
+    }
+
+    if (hasAbil(sInfo, 'laser')) {
+      const lb = laserBtnRect();
+      const lready = P.laserCD <= 0;
+      ctx.save();
+      ctx.globalAlpha = lready ? 0.28 : 0.12;
+      ctx.fillStyle = '#ff0000';
+      ctx.beginPath(); ctx.arc(lb.x, lb.y, lb.r, 0, Math.PI*2); ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = lready ? '#cc00ff' : '#552255'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(lb.x, lb.y, lb.r, 0, Math.PI*2); ctx.stroke();
+      if (!lready) {
+        const frac = 1 - (P.laserCD / LASER_COOLDOWN);
+        ctx.fillStyle = 'rgba(204,0,255,0.4)';
+        ctx.beginPath(); ctx.moveTo(lb.x, lb.y);
+        ctx.arc(lb.x, lb.y, lb.r, -Math.PI/2, -Math.PI/2 + frac*Math.PI*2);
+        ctx.closePath(); ctx.fill();
+      }
+      ctx.fillStyle = lready ? '#fff' : '#888';
+      ctx.font = `bold ${14.0*0.7}px 'Overbit', monospace`;
+      ctx.fillText('☢', lb.x, lb.y + 5);
+      ctx.restore();
+    }
+
+    if (P.laserFlashT > 0) {
+      // The actual beam - a thick, glowing red/purple bolt firing from the
+      // bird across the rest of the screen, fading out over its duration.
+      const lifeFrac = P.laserFlashT / 22;
+      ctx.save();
+      const beamH = 46 * (0.65 + lifeFrac * 0.35);
+
+      // Wide soft outer halo behind the beam for extra glow.
+      ctx.globalAlpha = Math.min(0.5, lifeFrac * 0.7);
+      const glowGrad = ctx.createLinearGradient(P.x, 0, W, 0);
+      glowGrad.addColorStop(0, '#ffffff');
+      glowGrad.addColorStop(0.15, '#ff0000');
+      glowGrad.addColorStop(1, '#aa00ff');
+      ctx.fillStyle = glowGrad;
+      ctx.fillRect(P.x, P.y - beamH*0.8, W - P.x, beamH*1.6);
+
+      // Main beam body.
+      ctx.globalAlpha = Math.min(1, lifeFrac * 1.4);
+      const grad = ctx.createLinearGradient(P.x, 0, W, 0);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.15, '#ff0000');
+      grad.addColorStop(1, '#aa00ff');
+      ctx.fillStyle = grad;
+      ctx.fillRect(P.x, P.y - beamH/2, W - P.x, beamH);
+
+      // White-hot core.
+      ctx.globalAlpha = Math.min(0.8, lifeFrac);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(P.x, P.y - beamH*0.22, W - P.x, beamH*0.44);
+
+      // Radial muzzle-flash burst at the firing point.
+      ctx.globalAlpha = Math.min(1, lifeFrac * 1.2);
+      const flashR = beamH * 1.3;
+      const flashGrad = ctx.createRadialGradient(P.x, P.y, 0, P.x, P.y, flashR);
+      flashGrad.addColorStop(0, 'rgba(255,255,255,0.95)');
+      flashGrad.addColorStop(0.3, 'rgba(255,0,0,0.7)');
+      flashGrad.addColorStop(1, 'rgba(170,0,255,0)');
+      ctx.fillStyle = flashGrad;
+      ctx.beginPath(); ctx.arc(P.x, P.y, flashR, 0, Math.PI*2); ctx.fill();
+      ctx.restore();
+    }
+
+    // Pause button - small circular YouTube-style control, top-left.
+    // While paused it's just a status indicator (dimmed) - resuming now
+    // only happens via the dedicated RESUME option in the pause menu.
+    const pb = pauseBtnRect();
+    ctx.save();
+    ctx.globalAlpha = isPaused ? 0.25 : 0.45;
+    ctx.fillStyle = '#000';
+    ctx.beginPath(); ctx.arc(pb.x, pb.y, pb.r, 0, Math.PI*2); ctx.fill();
+    ctx.globalAlpha = isPaused ? 0.5 : 1;
+    ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(pb.x, pb.y, pb.r, 0, Math.PI*2); ctx.stroke();
+    ctx.fillStyle = isPaused ? 'rgba(255,255,255,0.5)' : '#fff';
+    // Two pause bars (shown regardless of state - just dimmed while paused)
+    const bw = pb.r*0.22, bh = pb.r*0.9, gap = pb.r*0.16;
+    ctx.fillRect(pb.x - gap - bw, pb.y - bh/2, bw, bh);
+    ctx.fillRect(pb.x + gap, pb.y - bh/2, bw, bh);
+    ctx.restore();
+
+    if (isPaused) {
+      ctx.fillStyle = 'rgba(0,0,0,0.65)'; ctx.fillRect(0, 0, W, H);
+      ctx.font = `bold ${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#fff';
+      ctx.fillText('PAUSED', W/2, H*0.18);
+
+      ctx.font = `${17.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = '#00ff88'; ctx.fillText('> RESUME <',  W/2, H*0.30);
+      ctx.fillStyle = '#00e5ff'; ctx.fillText('> RESTART <', W/2, H*0.42);
+      ctx.fillStyle = '#fff';    ctx.fillText('> MENU <',    W/2, H*0.54);
+
+      ctx.fillStyle = save.cullerEnabled ? '#00ff88' : '#ff3355';
+      ctx.fillText(`CULL COINS: ${save.cullerEnabled ? 'ON' : 'OFF'}`, W/2, H*0.66);
+
+      ctx.save();
+      ctx.textAlign = 'left';
+      ctx.font = "bold 10px 'Overbit', monospace";
+      const gfxLabels = { low: 'LOW', normal: 'NORMAL', high: 'HIGH' };
+      const gfxColors = { low: '#0099ff', normal: '#00ff88', high: '#ff00ff' };
+      ctx.fillStyle = gfxColors[save.graphicsQuality] || gfxColors.normal;
+      ctx.fillText(`🎨 GFX: ${gfxLabels[save.graphicsQuality] || 'NORMAL'}`, 15, H*0.82);
+      ctx.fillStyle = save.musicEnabled ? '#00ff88' : '#ff3355';
+      ctx.fillText(save.musicEnabled ? '🎵 MUSIC: ON' : '🔇 MUSIC: OFF', 15, H*0.90);
+      ctx.restore();
+
+      ctx.textAlign = 'right';
+      ctx.font = `${9.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = '#663333';
+      ctx.fillText('RESET PROGRESS', W - 12, H*0.96);
+      ctx.textAlign = 'center';
+    }
+  }
+
+  if (state === ST.MENU) {
+    let titleSize = Math.min(44, W * 0.11);
+    ctx.font = `bold ${(titleSize)*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff'; ctx.fillText('FLYING BIRDS', W/2, H*0.18); 
+    ctx.font=`${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#fff';
+    ctx.fillText('> PLAY LEVELS <', W/2, H*0.38);
+    ctx.fillText('> STORE & SKINS <', W/2, H*0.54);
+    ctx.fillStyle='#ffaa00';
+    ctx.fillText('> UPGRADES <', W/2, H*0.70);
+    ctx.font=`${15.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#ffd700';
+    ctx.fillText(`COINS: ${save.gems}`, W/2, H*0.84);
+  }
+
+  if (state === ST.DIFF) {
+    const titleSize = Math.min(34, W * 0.06);
+    ctx.font = `bold ${(titleSize)*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff'; ctx.fillText('SELECT DIFFICULTY', W/2, H*0.14);
+
+    DIFFS.forEach((d, i) => {
+      const r = diffButtonRect(i);
+      const isSel = pendingDifficulty === d.id;
+      const pulse = isSel ? 1 + Math.sin(frame*0.12)*0.05 : 1;
+      const gl = gfxLevel();
+
+      if (isSel) {
+        ctx.save();
+        ctx.globalAlpha = gl === 0 ? 0.55 : 0.35;
+        ctx.strokeStyle = d.col; ctx.lineWidth = gl === 2 ? 4 : gl === 0 ? 1.5 : 2.5;
+        ctx.strokeRect(r.left, r.top, r.w, r.h);
+        if (gl === 2) {
+          ctx.globalAlpha = 0.12 + Math.sin(frame*0.1)*0.04;
+          ctx.fillStyle = d.col; ctx.fillRect(r.left, r.top, r.w, r.h);
+        }
+        ctx.restore();
+
+        const ay = r.top - 14 + Math.sin(frame*0.15)*4;
+        ctx.fillStyle = d.col;
+        ctx.beginPath();
+        ctx.moveTo(r.bx, ay); ctx.lineTo(r.bx-11, ay+15); ctx.lineTo(r.bx+11, ay+15);
+        ctx.closePath(); ctx.fill();
+
+        if (gl === 2 && frame % 5 === 0) burst(r.bx, r.by, d.col, 1, 1.3);
+      }
+
+      ctx.save();
+      ctx.translate(r.bx, r.by - 8); ctx.scale(pulse, pulse);
+      ctx.font = `bold ${(Math.min(28, r.w*0.32))*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = d.col;
+      ctx.fillText(d.label, 0, 0);
+      ctx.restore();
+
+      ctx.font = `${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+      const spdLbl = d.id === 'easy' ? 'SLOWER' : d.id === 'hard' ? 'FASTER' : 'ORIGINAL';
+      ctx.fillText(spdLbl, r.bx, r.by + 22);
+      ctx.fillStyle = '#666';
+      ctx.fillText(`Lv ${save.maxLevelByDiff[d.id]} unlocked`, r.bx, r.by + 42);
+    });
+
+    const cb = diffConfirmBtn();
+    const cp = 1 + Math.sin(frame*0.15)*0.07;
+    ctx.save(); ctx.translate(cb.x, cb.y); ctx.scale(cp, cp);
+    if (gfxLevel() > 0) {
+      ctx.globalAlpha = 0.3; ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(0, 0, cb.r, 0, Math.PI*2); ctx.fill();
+      ctx.globalAlpha = 1;
+    }
+    ctx.fillStyle = '#fff';
+    ctx.beginPath();
+    ctx.moveTo(0, -cb.r*0.5); ctx.lineTo(-cb.r*0.45, cb.r*0.3); ctx.lineTo(cb.r*0.45, cb.r*0.3);
+    ctx.closePath(); ctx.fill();
+    ctx.restore();
+    ctx.font = `${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#fff'; ctx.fillText('PRESS', cb.x, cb.y + cb.r + 16);
+
+    ctx.fillStyle='#888'; ctx.font=`${18.0*0.7}px 'Overbit', monospace`; ctx.fillText('< BACK', W*0.12, H*0.92);
+  }
+
+  if (state === ST.LEVELS) {
+    ctx.save(); ctx.translate(0, levelScrollY);
+    ctx.font=`bold ${40.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff'; ctx.fillText('SELECT LEVEL', W/2, H*0.1);
+
+    const dInfo = getDiff(save.difficulty);
+    ctx.font=`${16.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = dInfo.col; ctx.fillText(`MODE: ${dInfo.label}`, W/2, H*0.1 - 28);
+
+    const curMax = save.maxLevelByDiff[save.difficulty || 'normal'];
+    for(let i=1; i<=15; i++) {
+      let active = curMax >= i;
+      ctx.fillStyle = active ? '#fff' : '#444';
+      ctx.font=`${24.0*0.7}px 'Overbit', monospace`;
+      ctx.fillText(`LEVEL ${i}`, W/2, H*0.1 + i*(H/7));
+    }
+    
+    if (save.difficulty !== 'easy') {
+      ctx.fillStyle = curMax > 15 ? '#ff00ff' : '#444';
+      ctx.fillText(`FREEPLAY`, W/2, H*0.1 + 16*(H/7));
+    }
+    ctx.restore();
+
+    const bgGrad = ctx.createLinearGradient(0, H*0.8, 0, H);
+    bgGrad.addColorStop(0, 'rgba(0,0,0,0)'); bgGrad.addColorStop(0.5, 'rgba(0,0,0,0.9)'); bgGrad.addColorStop(1, '#000');
+    ctx.fillStyle = bgGrad; ctx.fillRect(0, H*0.75, W, H*0.25);
+    ctx.fillStyle='#888'; ctx.font=`${20.0*0.7}px 'Overbit', monospace`; ctx.fillText('< BACK', W/2, H*0.92);
+
+    // Vertical scrollbar slider - shows scroll position and can be dragged
+    // directly to jump to any point in the list.
+    const track = levelScrollbarTrack();
+    const trackH = track.bottom - track.top;
+    ctx.fillStyle = 'rgba(255,255,255,0.15)';
+    ctx.fillRect(track.x - 2, track.top, 4, trackH);
+
+    const maxScrollAbs = levelMaxScrollAbs();
+    const progress = maxScrollAbs > 0 ? Math.min(1, Math.max(0, -levelScrollY / maxScrollAbs)) : 0;
+    const thumbH = Math.max(28, trackH * 0.28);
+    const thumbY = track.top + (trackH - thumbH) * progress;
+    if (gfxLevel() > 0) { ctx.globalAlpha = 0.35; ctx.fillStyle = '#00e5ff'; ctx.fillRect(track.x - 5, thumbY - 3, 10, thumbH + 6); ctx.globalAlpha = 1; }
+    ctx.fillStyle = '#00e5ff';
+    ctx.fillRect(track.x - 3, thumbY, 6, thumbH);
+  }
+
+
+  if (state === ST.HYBRID) {
+    ctx.fillStyle='#888'; ctx.font=`${14.0*0.7}px 'Overbit', monospace`; ctx.textAlign='left'; ctx.fillText('< BACK', W*0.04, H*0.09); ctx.textAlign='center';
+
+    ctx.font = `bold ${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#dd44ff'; ctx.fillText('HYBRID LAB', W/2, H*0.085);
+    ctx.font = `${12.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffd700'; ctx.fillText(`COINS: ${save.gems}`, W/2, H*0.15);
+    ctx.font = `bold ${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#00e5ff';
+    ctx.fillText(`📂 MY HYBRIDS (${(save.hybrids||[]).length})`, W/2, H*0.2);
+
+    const skinA = hybridSlotA !== -1 ? SKINS.find(s => s.id === hybridSlotA) : null;
+    const skinB = hybridSlotB !== -1 ? SKINS.find(s => s.id === hybridSlotB) : null;
+
+    [['a', hybridSlotRect('a'), skinA], ['b', hybridSlotRect('b'), skinB]].forEach(([side, r, skin]) => {
+      const col = skin ? skin.col : '#444';
+      ctx.save();
+      ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.globalAlpha = 0.75;
+      ctx.strokeRect(r.left, r.top, r.w, r.h);
+      if (gfxLevel() > 0 && skin) { ctx.globalAlpha = 0.12; ctx.fillStyle = col; ctx.fillRect(r.left, r.top, r.w, r.h); }
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(r.bx, r.by - r.h*0.18);
+      if (skin) {
+        if (gfxLevel() > 0) { ctx.globalAlpha = 0.35; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(0,0,15,0,Math.PI*2); ctx.fill(); ctx.globalAlpha = 1; }
+        ctx.fillStyle = col;
+        ctx.beginPath(); ctx.moveTo(12,0); ctx.lineTo(-6,-9); ctx.lineTo(-2,0); ctx.lineTo(-6,9); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0,0,3.5,0,Math.PI*2); ctx.fill();
+      } else {
+        ctx.strokeStyle = '#666'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(0,0,13,0,Math.PI*2); ctx.stroke();
+        ctx.fillStyle = '#666'; ctx.font = `bold ${16.0*0.7}px 'Overbit', monospace`; ctx.fillText('?', 0, 6);
+      }
+      ctx.restore();
+
+      ctx.font = `${10.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = skin ? col : '#666';
+      ctx.fillText(skin ? skin.name : `SLOT ${side.toUpperCase()}`, r.bx, r.by + r.h*0.28);
+      ctx.font = `${8.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = '#888';
+      ctx.fillText(skin ? 'TAP TO CYCLE' : 'TAP TO PICK', r.bx, r.by + r.h*0.39);
+    });
+
+    ctx.font = `bold ${20.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#fff'; ctx.fillText('+', W/2, H*0.46);
+
+    if (skinA && skinB && skinA.id !== skinB.id) {
+      const blended = blendColors(skinA.col, skinB.col);
+      const abilA = Array.isArray(skinA.abil) ? skinA.abil : [skinA.abil];
+      const abilB = Array.isArray(skinB.abil) ? skinB.abil : [skinB.abil];
+      const combined = [...new Set([...abilA, ...abilB])].filter(x => x !== 'none').join(' + ');
+      ctx.font = `${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = blended; ctx.fillText('RESULT: ' + (combined || 'no ability'), W/2, H*0.65);
+    }
+
+    ctx.font = `bold ${13.0*0.7}px 'Overbit', monospace`;
+    ctx.fillStyle = save.gems >= HYBRID_COST ? '#00ff88' : '#ff3333';
+    ctx.fillText(`COST: ${HYBRID_COST}`, W/2, H*0.705);
+
+    if (shopMsg) {
+      ctx.font = `bold ${10.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = shopMsgIsError ? '#ff3333' : '#00ff88';
+      ctx.fillText(shopMsg, W/2, H*0.745);
+    }
+
+    // Big, obvious rectangular FUSE button - not a small corner icon.
+    const canConfirm = hybridSlotA !== -1 && hybridSlotB !== -1 && hybridSlotA !== hybridSlotB && save.gems >= HYBRID_COST && !(skinA && skinA.noFuse) && !(skinB && skinB.noFuse);
+    const cb = hybridConfirmBtn();
+    const cp = canConfirm ? 1 + Math.sin(frame*0.12)*0.04 : 1;
+    ctx.save();
+    ctx.translate(cb.x, cb.y); ctx.scale(cp, cp); ctx.translate(-cb.x, -cb.y);
+    if (gfxLevel() > 0 && canConfirm) {
+      ctx.globalAlpha = 0.3; ctx.fillStyle = '#00ff88';
+      ctx.fillRect(cb.left - 6, cb.top - 6, cb.w + 12, cb.h + 12);
+      ctx.globalAlpha = 1;
+    }
+    ctx.fillStyle = canConfirm ? 'rgba(0,255,136,0.18)' : 'rgba(255,255,255,0.06)';
+    ctx.fillRect(cb.left, cb.top, cb.w, cb.h);
+    ctx.strokeStyle = canConfirm ? '#00ff88' : '#555'; ctx.lineWidth = 2.5;
+    ctx.strokeRect(cb.left, cb.top, cb.w, cb.h);
+    ctx.font = `bold ${16.0*0.7}px 'Overbit', monospace`;
+    ctx.fillStyle = canConfirm ? '#00ff88' : '#666';
+    ctx.fillText('⚡ FUSE', cb.x, cb.y + 6);
+    ctx.restore();
+  }
+
+
+  if (state === ST.HYBRIDLIST) {
+    ctx.font = `bold ${26.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#dd44ff'; ctx.fillText('MY HYBRIDS', W/2, H*0.13);
+
+    const list = save.hybrids || [];
+    if (list.length === 0) {
+      ctx.font = `${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#888';
+      ctx.fillText('No hybrids yet -', W/2, H*0.4);
+      ctx.fillText('fuse two skins in the lab!', W/2, H*0.46);
+    } else {
+      if (hybridViewIdx >= list.length) hybridViewIdx = 0;
+      const h = list[hybridViewIdx];
+      const ready = hybridIsReady(h);
+
+      if (list.length > 1) {
+        ctx.font = `bold ${28.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#fff';
+        ctx.fillText('<', W*0.12, H*0.46);
+        ctx.fillText('>', W*0.88, H*0.46);
+      }
+
+      ctx.save();
+      ctx.translate(W/2, H*0.34);
+      if (gfxLevel() > 0 && ready) { ctx.globalAlpha = 0.35; ctx.fillStyle = h.col; ctx.beginPath(); ctx.arc(0,0,26,0,Math.PI*2); ctx.fill(); ctx.globalAlpha = 1; }
+      ctx.fillStyle = ready ? h.col : '#555';
+      ctx.beginPath(); ctx.moveTo(20,0); ctx.lineTo(-11,-15); ctx.lineTo(-6,0); ctx.lineTo(-11,15); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0,0,5,0,Math.PI*2); ctx.fill();
+      ctx.restore();
+
+      ctx.font = `bold ${16.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = ready ? h.col : '#888';
+      ctx.fillText(h.name, W/2, H*0.46);
+
+      const abilArr = Array.isArray(h.abil) ? h.abil : [h.abil];
+      ctx.font = `${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+      ctx.fillText(abilArr.filter(a => a !== 'none').join(' + ') || 'no ability', W/2, H*0.515);
+
+      if (ready) {
+        const isEquipped = curSkinIdx === h.id;
+        ctx.font = `bold ${15.0*0.7}px 'Overbit', monospace`;
+        ctx.fillStyle = isEquipped ? '#00ff88' : '#fff';
+        ctx.fillText(isEquipped ? 'EQUIPPED' : 'TAP TO EQUIP', W/2, H*0.65);
+      } else {
+        // Fusing progress: computed from real timestamps, so it's accurate
+        // to actual elapsed time even after the app was closed and reopened.
+        const total = h.readyAt - h.startedAt;
+        const elapsed = Date.now() - h.startedAt;
+        const frac = Math.max(0, Math.min(1, elapsed / total));
+        const remainMs = Math.max(0, h.readyAt - Date.now());
+        const remainMin = Math.ceil(remainMs / 60000);
+        const hh = Math.floor(remainMin / 60), mm = remainMin % 60;
+        const remainStr = hh > 0 ? `${hh}h ${mm}m left` : `${mm}m left`;
+
+        ctx.font = `bold ${12.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffaa00';
+        ctx.fillText(`FUSING... ${Math.floor(frac*100)}%`, W/2, H*0.62);
+
+        const barW = W * 0.5, barH = 10, barX = W/2 - barW/2, barY = H*0.655;
+        ctx.fillStyle = 'rgba(255,255,255,0.15)'; ctx.fillRect(barX, barY, barW, barH);
+        ctx.fillStyle = '#ffaa00'; ctx.fillRect(barX, barY, barW * frac, barH);
+        ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.strokeRect(barX, barY, barW, barH);
+
+        ctx.font = `${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+        ctx.fillText(remainStr, W/2, H*0.71);
+      }
+
+      ctx.font = `${9.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#555';
+      ctx.fillText(`${hybridViewIdx+1} / ${list.length}`, W/2, H*0.79);
+    }
+
+    ctx.fillStyle='#888'; ctx.font=`${17.0*0.7}px 'Overbit', monospace`; ctx.fillText('< BACK', W*0.12, H*0.92);
+  }
+
+
+  if (state === ST.UPGRADEPICK) {
+    const ownedSkins = getAllSkins().filter(s => save.unlocked.includes(s.id));
+    if (upgradePickIdx >= ownedSkins.length) upgradePickIdx = 0;
+    const picked = ownedSkins[upgradePickIdx];
+
+    ctx.font = `bold ${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffaa00';
+    ctx.fillText('UPGRADES', W/2, H*0.10);
+    ctx.font = `${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffd700';
+    ctx.fillText(`COINS: ${save.gems}`, W/2, H*0.17);
+    ctx.font = `${11.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+    ctx.fillText('CHOOSE A BIRD TO UPGRADE', W/2, H*0.23);
+
+    ctx.save();
+    ctx.translate(W/2, H*0.43);
+    const pulse = 1 + Math.sin(frame*0.08)*0.06;
+    ctx.scale(pulse, pulse);
+    if (gfxLevel() > 0) glowHalo(0, 0, 22, picked.col, glowIntensity(), 0.6);
+    ctx.fillStyle = picked.col;
+    ctx.beginPath(); ctx.moveTo(26,0); ctx.lineTo(-16,-21); ctx.lineTo(-7,0); ctx.lineTo(-16,21); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0,0,7,0,Math.PI*2); ctx.fill();
+    ctx.restore();
+
+    ctx.font = `bold ${20.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = picked.col;
+    ctx.fillText(picked.name, W/2, H*0.57);
+    ctx.font=`${26.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#fff';
+    ctx.fillText('<', W*0.12, H*0.44); ctx.fillText('>', W*0.88, H*0.44);
+
+    ctx.fillStyle = '#ffaa00'; ctx.font = `bold ${18.0*0.7}px 'Overbit', monospace`;
+    ctx.fillText('> SELECT <', W/2, H*0.69);
+
+    ctx.font = `${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#555';
+    ctx.fillText(`${upgradePickIdx+1} / ${ownedSkins.length}`, W/2, H*0.76);
+    ctx.fillStyle='#888'; ctx.font=`${15.0*0.7}px 'Overbit', monospace`;
+    ctx.fillText('< BACK', W*0.15, H*0.90);
+  }
+
+  if (state === ST.UPGRADES) {
+    const upSkin = getAllSkins().find(s => s.id === upgradeSelectedId) || SKINS[0];
+    const upg = getUpgrades(upgradeSelectedId);
+
+    ctx.font = `bold ${18.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffaa00';
+    ctx.fillText('UPGRADES', W/2, H*0.07);
+    ctx.font = `bold ${14.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = upSkin.col;
+    ctx.fillText(upSkin.name, W/2, H*0.13);
+    ctx.font = `${11.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffd700';
+    ctx.fillText(`COINS: ${save.gems}`, W/2, H*0.19);
+
+    const upDefs = [
+      { type:'shield',   label:'SHIELD DURATION', desc:`+1sec/level (Lv ${upg.shield})`,                          col:'#00ff88' },
+      { type:'coin',     label:'COIN MULTIPLIER',  desc:`x${Math.pow(1.1,upg.coin).toFixed(2)} (Lv ${upg.coin})`, col:'#ffd700' },
+      { type:'coinpipe', label:'COINS PER PIPE',   desc:`+${upg.coinpipe}/pipe now, next: +${upg.coinpipe+1}`,    col:'#00e5ff' },
+    ];
+
+    upDefs.forEach((ud, i) => {
+      const rowY = H*(0.31 + i*0.19);
+      const cost = upgradeCost(ud.type, upgradeSelectedId);
+      const canAfford = save.gems >= cost;
+
+      ctx.save();
+      ctx.globalAlpha = 0.15; ctx.fillStyle = ud.col;
+      ctx.fillRect(W*0.02, rowY - H*0.065, W*0.96, H*0.12);
+      ctx.globalAlpha = 1; ctx.fillStyle = ud.col;
+      ctx.fillRect(W*0.02, rowY - H*0.065, 4, H*0.12);
+      ctx.restore();
+
+      ctx.textAlign = 'left';
+      ctx.font = `bold ${10.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = ud.col;
+      ctx.fillText(ud.label, W*0.07, rowY - H*0.01);
+      ctx.font = `${8.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#bbb';
+      ctx.fillText(ud.desc, W*0.07, rowY + H*0.025);
+
+      ctx.textAlign = 'right';
+      ctx.fillStyle = canAfford ? ud.col : '#555';
+      ctx.font = `bold ${10.0*0.7}px 'Overbit', monospace`;
+      ctx.fillText('UPGRADE', W*0.97, rowY - H*0.01);
+      ctx.font = `${9.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = canAfford ? '#ffd700' : '#444';
+      ctx.fillText(`${cost}`, W*0.97, rowY + H*0.025);
+      ctx.textAlign = 'center';
+    });
+
+    if (shopMsg) {
+      ctx.font = `bold ${10.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle = shopMsgIsError ? '#ff3333' : '#00ff88';
+      ctx.fillText(shopMsg, W/2, H*0.88);
+    }
+    ctx.fillStyle='#888'; ctx.font=`${15.0*0.7}px 'Overbit', monospace`; ctx.textAlign='center';
+    ctx.fillText('< BACK', W*0.15, H*0.95);
+  }
+
+  if (state === ST.RESETCONFIRM) {
+    ctx.fillStyle = 'rgba(0,0,0,0.85)'; ctx.fillRect(0,0,W,H);
+    ctx.font = `bold ${26.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ff3333';
+    ctx.fillText('RESET PROGRESS?', W/2, H*0.22);
+    ctx.font = `${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+    ctx.fillText('this will wipe EVERYTHING.', W/2, H*0.33);
+    ctx.fillText('coins, skins, upgrades, levels.', W/2, H*0.39);
+    ctx.font = `${19.0*0.7}px 'Overbit', monospace`;
+    ctx.fillStyle = '#ff3333'; ctx.fillText("I'M SURE", W/2, H*0.57);
+    ctx.fillStyle = '#00ff88'; ctx.fillText('< GO BACK', W/2, H*0.77);
+  }
+
+  if (state === ST.RESETCONFIRM2) {
+    ctx.fillStyle = 'rgba(0,0,0,0.85)'; ctx.fillRect(0,0,W,H);
+    ctx.font = `bold ${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ff3333';
+    ctx.fillText('ARE YOU SURE', W/2, H*0.18);
+    ctx.fillText('SURE SURE?', W/2, H*0.27);
+    ctx.font = `${12.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ff6666';
+    ctx.fillText('there is NO going back after this.', W/2, H*0.37);
+    ctx.fillText('absolutely nothing will be saved.', W/2, H*0.43);
+    ctx.font = `${19.0*0.7}px 'Overbit', monospace`;
+    ctx.fillStyle = '#ff0000'; ctx.fillText('YES DELETE IT ALL', W/2, H*0.57);
+    ctx.fillStyle = '#00ff88'; ctx.fillText('< GO BACK', W/2, H*0.77);
+  }
+
+  if (state === ST.STORE) {
+    let sv = SKINS[storeViewIdx];
+    ctx.font=`bold ${40.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff'; ctx.fillText('STORE', W/2, H*0.15);
+    ctx.fillStyle='#ffd700'; ctx.font=`${20.0*0.7}px 'Overbit', monospace`; ctx.fillText(`COINS: ${save.gems}`, W/2, H*0.25);
+    
+    ctx.font=`${30.0*0.7}px 'Overbit', monospace`; ctx.fillStyle=sv.col; ctx.fillText(sv.name, W/2, H*0.45); 
+    
+    ctx.font=`${14.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#ccc'; ctx.fillText(sv.desc, W/2, H*0.53);
+    ctx.font=`${40.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#fff'; ctx.fillText('<', W*0.15, H*0.45); ctx.fillText('>', W*0.85, H*0.45);
+
+    if (save.unlocked.includes(sv.id)) {
+      ctx.fillStyle = curSkinIdx === sv.id ? '#00ff00' : '#fff';
+      ctx.fillText(curSkinIdx === sv.id ? 'EQUIPPED' : 'TAP TO EQUIP', W/2, H*0.65);
+    } else {
+      ctx.fillStyle = save.gems >= sv.cost ? '#00ff88' : '#ff3333';
+      ctx.fillText(`COST: ${sv.cost}`, W/2, H*0.65);
+    }
+    if (shopMsg) {
+        ctx.font = `${20.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = shopMsgIsError ? '#ff3333' : '#00ff00';
+        ctx.fillText(shopMsg, W/2, H*0.74);
+    }
+    ctx.fillStyle='#888'; ctx.font=`${20.0*0.7}px 'Overbit', monospace`; ctx.fillText('< BACK', W/2, H*0.92);
+
+    // HYBRID button - to the right of the equip/buy button
+    const hb = { left: W*0.76, right: W*0.99, top: H*0.52, bottom: H*0.79 };
+    ctx.save();
+    ctx.strokeStyle = '#dd44ff'; ctx.lineWidth = 2; ctx.globalAlpha = 0.8;
+    ctx.strokeRect(hb.left, hb.top, hb.right - hb.left, hb.bottom - hb.top);
+    if (gfxLevel() > 0) { ctx.globalAlpha = 0.12; ctx.fillStyle = '#dd44ff'; ctx.fillRect(hb.left, hb.top, hb.right - hb.left, hb.bottom - hb.top); }
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#dd44ff'; ctx.font = `bold ${11.0*0.7}px 'Overbit', monospace`;
+    ctx.fillText('HYBRID', (hb.left+hb.right)/2, (hb.top+hb.bottom)/2);
+    ctx.restore();
+
+    ctx.save();
+    ctx.textAlign = 'right';
+    ctx.font = "bold 10px 'Overbit', monospace";
+    ctx.fillStyle = save.musicEnabled ? '#00ff88' : '#ff3355';
+    ctx.fillText(save.musicEnabled ? '🎵 MUSIC: ON' : '🔇 MUSIC: OFF', W - 15, 35);
+    
+    ctx.textAlign = 'left';
+    const gfxLabels = { low: 'LOW', normal: 'NORMAL', high: 'HIGH' };
+    const gfxColors = { low: '#0099ff', normal: '#00ff88', high: '#ff00ff' };
+    ctx.fillStyle = gfxColors[save.graphicsQuality] || gfxColors.normal;
+    ctx.fillText(`🎨 GFX: ${gfxLabels[save.graphicsQuality] || 'NORMAL'}`, 15, 35);
+    ctx.restore();
+  }
+
+  if (state === ST.DEAD) {
+    ctx.fillStyle='rgba(0,0,0,0.7)'; ctx.fillRect(0,0,W,H);
+    ctx.font=`bold ${50.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#ff3355'; ctx.fillText('CRASHED', W/2, H*0.35); 
+    ctx.font=`${24.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#fff'; ctx.fillText(`SCORE: ${score}`, W/2, H*0.45);
+    if (deadT>30) {
+        ctx.fillStyle='#00e5ff'; ctx.fillText('> RESTART <', W/2, H*0.63);
+        ctx.fillStyle='#fff'; ctx.fillText('> MENU <', W/2, H*0.75);
+    }
+  }
+
+  if (state === ST.WIN) {
+    ctx.fillStyle='rgba(0,0,0,0.8)'; ctx.fillRect(0,0,W,H);
+    let clTextSize = Math.min(32, W * 0.085);
+    ctx.font=`bold ${(clTextSize)*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00ff88'; ctx.fillText('LEVEL CLEARED!', W/2, H*0.35); 
+    if (deadT>30) { 
+        ctx.font=`${24.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff'; ctx.fillText('> NEXT LEVEL <', W/2, H*0.63);
+        ctx.fillStyle='#fff'; ctx.fillText('> MENU <', W/2, H*0.75);
+    }
+    deadT++;
+  }
+
+  if (state === ST.FPMENU) {
+    const diff = save.difficulty || 'normal';
+    const dInfo = getDiff(diff);
+
+    ctx.font = `bold ${26.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#00e5ff';
+    ctx.fillText('FREEPLAY', W/2, H*0.16);
+    ctx.font = `${14.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = dInfo.col;
+    ctx.fillText(`MODE: ${dInfo.label}`, W/2, H*0.26);
+
+    ctx.font = `${16.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#ffd700';
+    ctx.fillText(`BEST SCORE: ${save.highScores[diff] || 0}`, W/2, H*0.39);
+    ctx.font = `${14.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#aaa';
+    ctx.fillText(`LAST SCORE: ${save.lastFreeplayScore[diff] || 0}`, W/2, H*0.48);
+
+    ctx.font = `${20.0*0.7}px 'Overbit', monospace`; ctx.fillStyle = '#00ff88';
+    ctx.fillText('> START <', W/2, H*0.62);
+
+    ctx.fillStyle='#888'; ctx.font=`${17.0*0.7}px 'Overbit', monospace`; ctx.fillText('< BACK', W*0.12, H*0.92);
+  }
+
+  if (state === ST.FPSCORE) {
+    ctx.fillStyle='rgba(0,0,0,0.82)'; ctx.fillRect(0,0,W,H);
+    const diff = save.difficulty || 'normal';
+
+    ctx.font=`bold ${22.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00e5ff';
+    ctx.fillText('FREEPLAY RESULTS', W/2, H*0.13);
+
+    ctx.font=`bold ${20.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#fff';
+    ctx.fillText(`SCORE: ${score}`, W/2, H*0.27);
+
+    const mins = Math.floor(freeplayTimeSec/60), secs = freeplayTimeSec%60;
+    const timeStr = mins > 0 ? `${mins}m ${secs}s` : `${secs}s`;
+    ctx.font=`${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#aaa';
+    ctx.fillText(`TIME SURVIVED: ${timeStr}`, W/2, H*0.37);
+
+    ctx.font=`${15.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#ffd700';
+    ctx.fillText(`BEST SCORE (${diff.toUpperCase()}): ${save.highScores[diff] || 0}`, W/2, H*0.47);
+
+    if (freeplayIsNewHigh) {
+      const pulse = 1 + Math.sin(frame*0.15)*0.08;
+      ctx.save(); ctx.translate(W/2, H*0.57); ctx.scale(pulse, pulse);
+      ctx.font=`bold ${13.0*0.7}px 'Overbit', monospace`; ctx.fillStyle='#00ff88';
+      ctx.fillText('NEW HIGH SCORE! +25 COINS', 0, 0);
+      ctx.restore();
+    }
+
+    if (deadT>30) {
+      ctx.font=`${19.0*0.7}px 'Overbit', monospace`;
+      ctx.fillStyle='#00e5ff'; ctx.fillText('> RESTART <', W/2, H*0.71);
+      ctx.fillStyle='#fff'; ctx.fillText('> MENU <', W/2, H*0.83);
+    }
+    deadT++;
+  }
+
+  if (bgFlash > 0) { ctx.fillStyle = `rgba(${bgFlashColor}, ${bgFlash})`; ctx.fillRect(0, 0, W, H); }
+  ctx.restore();
+}
+
+let isPaused = false;
+function setPaused(val) {
+  isPaused = val;
+  pauseUi.style.display = val ? 'flex' : 'none';
+  if (val) glowSlider.value = save.glowIntensity;
+}
+function loop() { 
+  if (state === ST.SPLASH) {
+    splashFrame++;
+    if (splashFrame >= 300) { state = ST.MENU; } // 5 seconds at 60fps, always advances
+  } else {
+    tickBgm(); 
+    if (!orientationBlocked && !isPaused) update(); 
+  }
+  draw(); 
+  requestAnimationFrame(loop); 
+}
+applyGraphicsQuality();
+initEnvironment(); loop();
+</script>
+<script>
+    // This script triggers fullscreen mode on the first user interaction
+    // and attempts to hard-lock the screen orientation to landscape on
+    // browsers/WebViews that support the Screen Orientation API. On
+    // browsers that don't support it (notably iOS Safari), the
+    // #rotate-overlay above still enforces landscape-only play.
+    function lockLandscape() {
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+        }
+    }
+    document.addEventListener('click', function() {
+        var element = document.documentElement;
+        if (element.requestFullscreen) {
+            element.requestFullscreen().then(lockLandscape).catch(lockLandscape);
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+            lockLandscape();
+        } else {
+            lockLandscape();
+        }
+    }, { once: true });
+</script>
+</body>
+</html>
