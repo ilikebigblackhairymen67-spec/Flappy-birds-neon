@@ -11,38 +11,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up Java Development Kit
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: 'zulu'
           java-version: '17'
 
-      - name: Install Cordova
-        run: npm install -g cordova
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
-      - name: Create Cordova Project
-        run: |
-          cordova create build_tmp com.neonbirdhunt.game "Neon Bird Hunt"
-          cd build_tmp
-          cordova platform add android
-          rm -rf www/*
-          cp -r ../* www/ || true
-          rm -rf www/build_tmp
+      - name: Install Dependencies
+        run: flutter pub get
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Build Android APK
-        run: |
-          cd build_tmp
-          cordova build android --release
+      - name: Build APK
+        run: flutter build apk --release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: neon-bird-hunt-apk
-          path: build_tmp/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
-
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
