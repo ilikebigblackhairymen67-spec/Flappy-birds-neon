@@ -1,0 +1,30 @@
+{
+  "name": "flappybirds-neon",
+  "version": "1.0.0",
+  "description": "FLYING BIRDS - Flappy Birds Neon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flappy",
+    "birds",
+    "neon",
+    "game",
+    "arcade"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cordova": "^12.0.0",
+    "cordova-android": "^12.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
